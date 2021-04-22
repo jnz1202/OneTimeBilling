@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_fix">
+    <sys_script_fix action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <before>false</before>
+        <description/>
+        <flush_cache>false</flush_cache>
+        <name>test date</name>
+        <record_for_rollback>false</record_for_rollback>
+        <run_once>true</run_once>
+        <script><![CDATA[var gr = new GlideRecord("x_nios2_onetimebil_one_time_bill");
+gr.addQuery('u_status', 'Pending');
+gr.query();
+while(gr.next()){
+	var pDay = gr.u_date_sent;
+	/*var ps = new GlideDateTime(pDay);
+	ps.addDaysUTC(7);
+	var sPending = ps.getDate();
+	//gs.info('send: ' + gr.u_date_sent);
+	var now = new GlideDateTime().getDisplayValue();
+	var ans = false;
+	//var dDiff = GlideDateTime.subtract() (pDay.getDisplayValue(), now.getDisplayValue(), true);
+var dif= now -pDay;
+
+	gs.info(gr.u_bill_number + ' sent: ' + gr.u_date_sent + ' days: ' + now);
+	if(now.indexOf(sPending)>=0)
+		{
+		gs.info('7 days pendind bill:  ' + gr.u_bill_number);
+		gs.eventQueue("x_nios2_onetimebil.one_time_bill.pending", current, current.u_customer_name, current.u_customer_ao);
+	}*/
+
+ var now = new GlideDateTime().getDisplayValue();
+var ps = new GlideDateTime(pDay.getDisplayValue()); 
+ps.addDaysUTC(7);
+ var dateafter =ps.getDate();
+ 
+gs.info(gr.u_bill_number + ' sent: ' + gr.u_date_sent + ' Date After 7 days: ' +dateafter + ' now: ' + now);       
+	if (dateafter <= now){
+		
+		gs.info(gr.u_bill_number);//Date + 1 day
+//gs.info('Date Before' +datebefore);   //Date - 1 day
+	}
+
+}]]></script>
+        <sys_class_name>sys_script_fix</sys_class_name>
+        <sys_created_by>d_jnz17</sys_created_by>
+        <sys_created_on>2018-11-14 21:11:48</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>7e7bc999dbfd23805eabf20e0f96199c</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_name>test date</sys_name>
+        <sys_package display_value="One Time Billing" source="x_nios2_onetimebil">3f5dbd7edbe8a30004c77d1d0f961949</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="One Time Billing">3f5dbd7edbe8a30004c77d1d0f961949</sys_scope>
+        <sys_update_name>sys_script_fix_7e7bc999dbfd23805eabf20e0f96199c</sys_update_name>
+        <sys_updated_by>d_jnz17</sys_updated_by>
+        <sys_updated_on>2018-11-14 21:25:05</sys_updated_on>
+        <unloadable>false</unloadable>
+    </sys_script_fix>
+</record_update>

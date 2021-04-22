@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role">
+    <sys_security_acl_role action="DELETE">
+        <sys_class_name>sys_security_acl_role</sys_class_name>
+        <sys_created_by>cnssn</sys_created_by>
+        <sys_created_on>2021-02-17 19:36:43</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>7ba72acb1b5e6c108418ebddac4bcb1a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_nios2_onetimebil_one_time_bill.u_service_amount.x_nios2_onetimebil.upload_work_order_file_user</sys_name>
+        <sys_package display_value="One Time Billing" source="x_nios2_onetimebil">3f5dbd7edbe8a30004c77d1d0f961949</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="One Time Billing">3f5dbd7edbe8a30004c77d1d0f961949</sys_scope>
+        <sys_security_acl display_value="x_nios2_onetimebil_one_time_bill.u_service_amount">46b2e796dbc2a30004c77d1d0f9619fb</sys_security_acl>
+        <sys_update_name>sys_security_acl_role_7ba72acb1b5e6c108418ebddac4bcb1a</sys_update_name>
+        <sys_updated_by>cnssn</sys_updated_by>
+        <sys_updated_on>2021-02-17 19:36:43</sys_updated_on>
+        <sys_user_role display_value="x_nios2_onetimebil.upload_work_order_file_user" name="x_nios2_onetimebil.upload_work_order_file_user">d9a93fc31b46a4d0f5659605bc4bcb12</sys_user_role>
+        <transaction_id/>
+    </sys_security_acl_role>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="One Time Billing">3f5dbd7edbe8a30004c77d1d0f961949</application>
+        <comments/>
+        <file_path/>
+        <instance_id>5d010e26db5384901198b16a3296195c</instance_id>
+        <instance_name>nistdev</instance_name>
+        <name>sys_security_acl_role_7ba72acb1b5e6c108418ebddac4bcb1a</name>
+        <order/>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role"><sys_security_acl_role action="INSERT_OR_UPDATE"><sys_class_name>sys_security_acl_role</sys_class_name><sys_created_by>cnssn</sys_created_by><sys_created_on>2021-02-17 19:36:43</sys_created_on><sys_customer_update>false</sys_customer_update><sys_id>7ba72acb1b5e6c108418ebddac4bcb1a</sys_id><sys_mod_count>0</sys_mod_count><sys_name>x_nios2_onetimebil_one_time_bill.u_service_amount.x_nios2_onetimebil.upload_work_order_file_user</sys_name><sys_package display_value="One Time Billing" source="x_nios2_onetimebil">3f5dbd7edbe8a30004c77d1d0f961949</sys_package><sys_policy/><sys_replace_on_upgrade>false</sys_replace_on_upgrade><sys_scope display_value="One Time Billing">3f5dbd7edbe8a30004c77d1d0f961949</sys_scope><sys_security_acl display_value="x_nios2_onetimebil_one_time_bill.u_service_amount">46b2e796dbc2a30004c77d1d0f9619fb</sys_security_acl><sys_update_name>sys_security_acl_role_7ba72acb1b5e6c108418ebddac4bcb1a</sys_update_name><sys_updated_by>cnssn</sys_updated_by><sys_updated_on>2021-02-17 19:36:43</sys_updated_on><sys_user_role display_value="x_nios2_onetimebil.upload_work_order_file_user" name="x_nios2_onetimebil.upload_work_order_file_user">d9a93fc31b46a4d0f5659605bc4bcb12</sys_user_role><transaction_id/></sys_security_acl_role></record_update>]]></payload>
+        <payload_hash>100717205</payload_hash>
+        <record_name>x_nios2_onetimebil_one_time_bill.u_service_amount.x_nios2_onetimebil.upload_work_order_file_user</record_name>
+        <reverted_from/>
+        <source>cc348b361b8ea0d0f5659605bc4bcbb3</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>cnssn</sys_created_by>
+        <sys_created_on>2021-02-17 19:36:43</sys_created_on>
+        <sys_id>37b72ecb1b5e6c108418ebddac4bcb8f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>177b17ea6640000001</sys_recorded_at>
+        <sys_updated_by>cnssn</sys_updated_by>
+        <sys_updated_on>2021-02-17 19:36:43</sys_updated_on>
+        <type>Access Roles</type>
+        <update_guid>3fb72ecbe95e6c10cca001ce3280e18e</update_guid>
+        <update_guid_history>3fb72ecbe95e6c10cca001ce3280e18e:100717205</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Record deleted 2021-02-17 15:05:11">c94eaa871b9e6c108418ebddac4bcb9e</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>cnssn</sys_created_by>
+        <sys_created_on>2021-02-17 20:05:11</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_db_object display_value="" name="sys_security_acl_role">sys_security_acl_role</sys_db_object>
+        <sys_id>63afc0230cee41849c0000674b7db329</sys_id>
+        <sys_metadata>7ba72acb1b5e6c108418ebddac4bcb1a</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_nios2_onetimebil_one_time_bill.u_service_amount.x_nios2_onetimebil.upload_work_order_file_user</sys_name>
+        <sys_package display_value="One Time Billing" source="x_nios2_onetimebil">3f5dbd7edbe8a30004c77d1d0f961949</sys_package>
+        <sys_parent display_value="x_nios2_onetimebil_one_time_bill.u_service_amount">46b2e796dbc2a30004c77d1d0f9619fb</sys_parent>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="One Time Billing">3f5dbd7edbe8a30004c77d1d0f961949</sys_scope>
+        <sys_scope_delete display_value="">10bdecfd6df0499c9ac08ab0c5e65664</sys_scope_delete>
+        <sys_update_name>sys_security_acl_role_7ba72acb1b5e6c108418ebddac4bcb1a</sys_update_name>
+        <sys_update_version display_value="sys_security_acl_role_7ba72acb1b5e6c108418ebddac4bcb1a">37b72ecb1b5e6c108418ebddac4bcb8f</sys_update_version>
+        <sys_updated_by>cnssn</sys_updated_by>
+        <sys_updated_on>2021-02-17 20:05:11</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Service PTC" max_length="40" name="x_nios2_onetimebil_service_ptc" sizeclass="222" type="collection">
+        <element label="Service Name" max_length="32" name="service_id" reference="x_nios2_onetimebil_services_provided" type="reference"/>
+        <element calculation="(function calculatedFieldValue(current) {&#13;&#10;&#13;&#10;&#9;// Add your code here&#13;&#10;&#9;return '';  // return the calculated value&#13;&#10;&#13;&#10;})(current);" label="Service Project" max_length="20" name="u_service_project" type="string"/>
+        <element calculation="(function calculatedFieldValue(current) {&#13;&#10;&#13;&#10;&#9;// Add your code here&#13;&#10;&#9;return '';  // return the calculated value&#13;&#10;&#13;&#10;})(current);" label="Service Project ID" max_length="20" name="u_service_project_id" type="string"/>
+        <element display="true" label="Service PTC" max_length="32" name="u_service_ptc" reference="u_project_task_code" reference_qual="u_fund_code=98^EQ" reference_qual_condition="u_fund_code=98^EQ" type="reference"/>
+        <element calculation="(function calculatedFieldValue(current) {&#13;&#10;&#13;&#10;&#9;// Add your code here&#13;&#10;&#9;return '';  // return the calculated value&#13;&#10;&#13;&#10;})(current);" label="Service Task" max_length="20" name="u_service_task" type="string"/>
+        <index name="index">
+            <element name="service_id"/>
+        </index>
+        <index name="index2">
+            <element name="u_service_ptc"/>
+        </index>
+    </element>
+</database>

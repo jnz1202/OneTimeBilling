@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_nios2_onetimebil.getAoOu</api_name>
+        <caller_access/>
+        <client_callable>true</client_callable>
+        <description/>
+        <name>getAoOu</name>
+        <script><![CDATA[function getAoOu(){
+/*	
+	var uDiv = new GlideRecord('cmn_department');
+	uDiv.addEncodedQuery('u_active=true^sys_class_name=cmn_department^primary_contact=' +gs.getUserID());
+	uDiv.query();
+	if(uDiv.next()) {
+		
+		return uDiv.u_organizational_unit;
+	}
+	*/
+	//var arrayUtil = new ArrayUtil();
+		var retArr = [];
+		var divisions = new GlideRecord('cmn_department');
+		divisions.addEncodedQuery('u_active=true^sys_class_name=cmn_department^primary_contact=' +gs.getUserID());
+		divisions.query();
+		while(divisions.next())
+			retArr.push(divisions.u_organizational_unit.toString());
+		return retArr;
+		
+}
+]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>d_jnz17</sys_created_by>
+        <sys_created_on>2019-03-25 19:04:28</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>976713dbdbd4bf00ca18f3840f9619aa</sys_id>
+        <sys_mod_count>12</sys_mod_count>
+        <sys_name>getAoOu</sys_name>
+        <sys_package display_value="One Time Billing" source="x_nios2_onetimebil">3f5dbd7edbe8a30004c77d1d0f961949</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="One Time Billing">3f5dbd7edbe8a30004c77d1d0f961949</sys_scope>
+        <sys_update_name>sys_script_include_976713dbdbd4bf00ca18f3840f9619aa</sys_update_name>
+        <sys_updated_by>jnz1202</sys_updated_by>
+        <sys_updated_on>2021-03-29 19:32:33</sys_updated_on>
+    </sys_script_include>
+</record_update>

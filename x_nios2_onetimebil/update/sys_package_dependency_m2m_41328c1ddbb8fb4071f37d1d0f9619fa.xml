@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_package_dependency_m2m">
+    <sys_package_dependency_m2m action="INSERT_OR_UPDATE">
+        <dependency display_value="System Import Sets" source="com.glide.system_import_set">84014f33c823000013c41b641712256b</dependency>
+        <min_version/>
+        <sys_created_by>system</sys_created_by>
+        <sys_created_on>2019-04-12 18:56:26</sys_created_on>
+        <sys_id>41328c1ddbb8fb4071f37d1d0f9619fa</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_package display_value="One Time Billing" source="x_nios2_onetimebil">3f5dbd7edbe8a30004c77d1d0f961949</sys_package>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2019-04-12 18:56:26</sys_updated_on>
+    </sys_package_dependency_m2m>
+</record_update>

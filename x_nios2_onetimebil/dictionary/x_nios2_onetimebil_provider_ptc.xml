@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Provider PTC" max_length="40" name="x_nios2_onetimebil_provider_ptc" sizeclass="2188" type="collection">
+        <element calculation="(function calculatedFieldValue(current) {&#13;&#10;&#13;&#10;&#9;// Add your code here&#13;&#10;&#9;return '';  // return the calculated value&#13;&#10;&#13;&#10;})(current);" label="Amount" max_length="50" name="u_amount" type="decimal"/>
+        <element calculation="(function calculatedFieldValue(current) {&#13;&#10;&#13;&#10;&#9;// Add your code here&#13;&#10;&#9;return '';  // return the calculated value&#13;&#10;&#13;&#10;})(current);" dependent="u_service_name" dependent_on_field="u_service_name" label="Bill" max_length="32" name="u_bill" reference="x_nios2_onetimebil_one_time_bill" reference_cascade_rule="cascade" type="reference" use_dependent_field="true"/>
+        <element calculation="(function calculatedFieldValue(current) {&#13;&#10;&#13;&#10;&#9;// Add your code here&#13;&#10;&#9;return '';  // return the calculated value&#13;&#10;&#13;&#10;})(current);" label="Provider PTC" max_length="32" name="u_provider_ptc" reference="u_project_task_code" type="reference"/>
+        <index name="index">
+            <element name="u_provider_ptc"/>
+        </index>
+        <index name="index2">
+            <element name="u_bill"/>
+        </index>
+    </element>
+</database>

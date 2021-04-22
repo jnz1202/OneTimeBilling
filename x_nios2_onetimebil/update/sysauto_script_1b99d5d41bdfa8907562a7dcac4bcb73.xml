@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sysauto_script">
+    <sysauto_script action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <business_calendar/>
+        <condition/>
+        <conditional>false</conditional>
+        <entered_time/>
+        <name>Interaction state change for walk-up</name>
+        <run_as/>
+        <run_as_tz/>
+        <run_dayofmonth>1</run_dayofmonth>
+        <run_dayofweek/>
+        <run_period/>
+        <run_start>2021-03-31 12:28:00</run_start>
+        <run_time/>
+        <run_type>once</run_type>
+        <script><![CDATA[new sn_walkup.AutoTriggerFacade().getAptScheduleScript( 'd799d5d41bdfa8907562a7dcac4bcb71',  '120');]]></script>
+        <sys_class_name>sysauto_script</sys_class_name>
+        <sys_created_by>cnssn</sys_created_by>
+        <sys_created_on>2021-03-30 17:54:50</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>1b99d5d41bdfa8907562a7dcac4bcb73</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Interaction state change for walk-up</sys_name>
+        <sys_package display_value="One Time Billing" source="x_nios2_onetimebil">3f5dbd7edbe8a30004c77d1d0f961949</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="One Time Billing">3f5dbd7edbe8a30004c77d1d0f961949</sys_scope>
+        <sys_update_name>sysauto_script_1b99d5d41bdfa8907562a7dcac4bcb73</sys_update_name>
+        <sys_updated_by>cnssn</sys_updated_by>
+        <sys_updated_on>2021-03-30 17:54:50</sys_updated_on>
+        <time_zone/>
+        <upgrade_safe>false</upgrade_safe>
+    </sysauto_script>
+</record_update>

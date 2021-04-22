@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_policy_action">
+    <sys_ui_policy_action action="INSERT_OR_UPDATE">
+        <cleared>false</cleared>
+        <disabled>true</disabled>
+        <field>u_customer_ao</field>
+        <mandatory>ignore</mandatory>
+        <sys_class_name>sys_ui_policy_action</sys_class_name>
+        <sys_created_by>d_jnz17</sys_created_by>
+        <sys_created_on>2018-11-21 18:13:41</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>d896a06fdbb12700ca18f3840f9619a6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>u_customer_ao</sys_name>
+        <sys_package display_value="One Time Billing" source="x_nios2_onetimebil">3f5dbd7edbe8a30004c77d1d0f961949</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="One Time Billing">3f5dbd7edbe8a30004c77d1d0f961949</sys_scope>
+        <sys_update_name>sys_ui_policy_action_d896a06fdbb12700ca18f3840f9619a6</sys_update_name>
+        <sys_updated_by>d_jnz17</sys_updated_by>
+        <sys_updated_on>2018-11-21 18:13:41</sys_updated_on>
+        <table>x_nios2_onetimebil_one_time_bill</table>
+        <ui_policy display_value="read only for customer AO">d207f443db21ab405eabf20e0f96193f</ui_policy>
+        <visible>ignore</visible>
+    </sys_ui_policy_action>
+</record_update>

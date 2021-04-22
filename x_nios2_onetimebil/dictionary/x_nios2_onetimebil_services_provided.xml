@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Services Provided" max_length="40" name="x_nios2_onetimebil_services_provided" sizeclass="214" type="collection">
+        <element calculation="(function calculatedFieldValue(current) {&#13;&#10;&#13;&#10;&#9;// Add your code here&#13;&#10;&#9;return '';  // return the calculated value&#13;&#10;&#13;&#10;})(current);" label="Cost Object Class" mandatory="true" max_length="20" name="cost_object_class" type="integer"/>
+        <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" dynamic_default_value="0d9c53c0db3ea2002156d20e0f96194d" label="Number" max_length="40" name="number" type="string" use_dynamic_default="true"/>
+        <element calculation="(function calculatedFieldValue(current) {&#13;&#10;&#13;&#10;&#9;// Add your code here&#13;&#10;&#9;return '';  // return the calculated value&#13;&#10;&#13;&#10;})(current);" default="true" label="Active" max_length="40" name="u_active" read_only="true" type="boolean"/>
+        <element label="Contact Email" max_length="50" name="u_contact_email" type="string"/>
+        <element label="Contact First Name" max_length="50" name="u_contact_first_name" type="string"/>
+        <element label="Contact Last Name" max_length="50" name="u_contact_last_name" type="string"/>
+        <element label="Contact Phone Number" max_length="50" name="u_contact_phone_number" type="string"/>
+        <element label="Cost Object Class" mandatory="true" max_length="20" name="u_cost_object_class" type="string"/>
+        <element default="6246" label="Income Object Class" mandatory="true" max_length="20" name="u_income_object_class" type="string"/>
+        <element calculation="(function calculatedFieldValue(current) {&#13;&#10;&#13;&#10;&#13;&#10;})(current);" label="Point of Contact" mandatory="true" max_length="32" name="u_point_of_contact" reference="sys_user" reference_qual="active=true^u_class=1^EQ" reference_qual_condition="active=true^u_class=1^EQ" type="reference"/>
+        <element label="Service Division" mandatory="true" max_length="32" name="u_service_division" reference="cmn_department" reference_qual="u_active=true^sys_class_name=cmn_department^EQ" reference_qual_condition="u_active=true^sys_class_name=cmn_department^EQ" type="reference"/>
+        <element default="javascript:global.getNextObjNumberPadded();" dynamic_default_value="0d9c53c0db3ea2002156d20e0f96194d" label="Service ID" max_length="100" name="u_service_id" type="string" use_dynamic_default="true"/>
+        <element display="true" label="Service Name" mandatory="true" max_length="100" name="u_service_name" type="string"/>
+        <element calculation="(function calculatedFieldValue(current) {&#13;&#10;&#13;&#10;&#9;// Add your code here&#13;&#10;&#9;return '';  // return the calculated value&#13;&#10;&#13;&#10;})(current);" label="Service Short Name" max_length="10" name="u_service_short_name" type="string"/>
+        <index name="index">
+            <element name="u_service_division"/>
+        </index>
+        <index name="index2">
+            <element name="u_point_of_contact"/>
+        </index>
+    </element>
+</database>

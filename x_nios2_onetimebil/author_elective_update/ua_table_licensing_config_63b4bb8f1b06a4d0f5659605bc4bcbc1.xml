@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="ua_table_licensing_config">
+    <ua_table_licensing_config action="DELETE">
+        <is_fulfillment>false</is_fulfillment>
+        <license_condition/>
+        <license_model>none</license_model>
+        <license_roles/>
+        <name>x_nios2_onetimebil_upload_prep_work_order</name>
+        <op_delete>true</op_delete>
+        <op_insert>true</op_insert>
+        <op_update>true</op_update>
+        <owner_condition/>
+        <sys_class_name>ua_table_licensing_config</sys_class_name>
+        <sys_created_by>cnssn</sys_created_by>
+        <sys_created_on>2021-02-05 14:57:25</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>63b4bb8f1b06a4d0f5659605bc4bcbc1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_nios2_onetimebil_upload_prep_work_order</sys_name>
+        <sys_package display_value="One Time Billing" source="x_nios2_onetimebil">3f5dbd7edbe8a30004c77d1d0f961949</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="One Time Billing">3f5dbd7edbe8a30004c77d1d0f961949</sys_scope>
+        <sys_update_name>ua_table_licensing_config_63b4bb8f1b06a4d0f5659605bc4bcbc1</sys_update_name>
+        <sys_updated_by>cnssn</sys_updated_by>
+        <sys_updated_on>2021-02-05 14:57:25</sys_updated_on>
+    </ua_table_licensing_config>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="One Time Billing">3f5dbd7edbe8a30004c77d1d0f961949</application>
+        <comments/>
+        <file_path/>
+        <instance_id>5d010e26db5384901198b16a3296195c</instance_id>
+        <instance_name>nistdev</instance_name>
+        <name>ua_table_licensing_config_63b4bb8f1b06a4d0f5659605bc4bcbc1</name>
+        <order/>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="ua_table_licensing_config"><ua_table_licensing_config action="INSERT_OR_UPDATE"><is_fulfillment>false</is_fulfillment><license_condition/><license_model>none</license_model><license_roles/><name>x_nios2_onetimebil_upload_prep_work_order</name><op_delete>true</op_delete><op_insert>true</op_insert><op_update>true</op_update><owner_condition/><sys_class_name>ua_table_licensing_config</sys_class_name><sys_created_by>cnssn</sys_created_by><sys_created_on>2021-02-05 14:57:25</sys_created_on><sys_customer_update>false</sys_customer_update><sys_id>63b4bb8f1b06a4d0f5659605bc4bcbc1</sys_id><sys_mod_count>0</sys_mod_count><sys_name>x_nios2_onetimebil_upload_prep_work_order</sys_name><sys_package display_value="One Time Billing" source="x_nios2_onetimebil">3f5dbd7edbe8a30004c77d1d0f961949</sys_package><sys_policy/><sys_replace_on_upgrade>false</sys_replace_on_upgrade><sys_scope display_value="One Time Billing">3f5dbd7edbe8a30004c77d1d0f961949</sys_scope><sys_update_name>ua_table_licensing_config_63b4bb8f1b06a4d0f5659605bc4bcbc1</sys_update_name><sys_updated_by>cnssn</sys_updated_by><sys_updated_on>2021-02-05 14:57:25</sys_updated_on></ua_table_licensing_config></record_update>]]></payload>
+        <payload_hash>-1960058661</payload_hash>
+        <record_name>x_nios2_onetimebil_upload_prep_work_order</record_name>
+        <reverted_from/>
+        <source>f0c20b441b92dc10f5659605bc4bcb44</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>cnssn</sys_created_by>
+        <sys_created_on>2021-02-05 14:57:25</sys_created_on>
+        <sys_id>67b4bb8f1b06a4d0f5659605bc4bcbc3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>17772b2a0470000001</sys_recorded_at>
+        <sys_updated_by>cnssn</sys_updated_by>
+        <sys_updated_on>2021-02-05 14:57:25</sys_updated_on>
+        <type>Table Subscription Configuration</type>
+        <update_guid>6fb4bb8f0b06a4d0ad73cebfe4ed9ac2</update_guid>
+        <update_guid_history>6fb4bb8f0b06a4d0ad73cebfe4ed9ac2:-1960058661</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>cnssn</sys_created_by>
+        <sys_created_on>2021-02-05 15:13:55</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_db_object display_value="" name="ua_table_licensing_config">ua_table_licensing_config</sys_db_object>
+        <sys_id>09de39ef52ae48688128de68a945dc90</sys_id>
+        <sys_metadata>63b4bb8f1b06a4d0f5659605bc4bcbc1</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_nios2_onetimebil_upload_prep_work_order</sys_name>
+        <sys_package display_value="One Time Billing" source="x_nios2_onetimebil">3f5dbd7edbe8a30004c77d1d0f961949</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="One Time Billing">3f5dbd7edbe8a30004c77d1d0f961949</sys_scope>
+        <sys_scope_delete display_value="">10bdecfd6df0499c9ac08ab0c5e65664</sys_scope_delete>
+        <sys_update_name>ua_table_licensing_config_63b4bb8f1b06a4d0f5659605bc4bcbc1</sys_update_name>
+        <sys_update_version display_value="ua_table_licensing_config_63b4bb8f1b06a4d0f5659605bc4bcbc1">67b4bb8f1b06a4d0f5659605bc4bcbc3</sys_update_version>
+        <sys_updated_by>cnssn</sys_updated_by>
+        <sys_updated_on>2021-02-05 15:13:55</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

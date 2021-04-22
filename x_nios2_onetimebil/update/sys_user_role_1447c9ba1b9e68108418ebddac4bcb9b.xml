@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_user_role">
+    <sys_user_role action="INSERT_OR_UPDATE">
+        <assignable_by/>
+        <can_delegate>true</can_delegate>
+        <description>User can see One Time Bill "Upload Work Order Files" module  (Not use this role, use upload_work_order_file_user)</description>
+        <elevated_privilege>false</elevated_privilege>
+        <encryption_context/>
+        <grantable>true</grantable>
+        <includes_roles/>
+        <name>x_nios2_onetimebil.one_time_bill_wo</name>
+        <requires_subscription>-1</requires_subscription>
+        <scoped_admin>false</scoped_admin>
+        <suffix>one_time_bill_wo</suffix>
+        <sys_class_name>sys_user_role</sys_class_name>
+        <sys_created_by>cnssn</sys_created_by>
+        <sys_created_on>2021-02-16 17:58:31</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>1447c9ba1b9e68108418ebddac4bcb9b</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>x_nios2_onetimebil.one_time_bill_wo</sys_name>
+        <sys_package display_value="One Time Billing" source="x_nios2_onetimebil">3f5dbd7edbe8a30004c77d1d0f961949</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="One Time Billing">3f5dbd7edbe8a30004c77d1d0f961949</sys_scope>
+        <sys_update_name>sys_user_role_1447c9ba1b9e68108418ebddac4bcb9b</sys_update_name>
+        <sys_updated_by>cnssn</sys_updated_by>
+        <sys_updated_on>2021-02-16 18:03:00</sys_updated_on>
+    </sys_user_role>
+</record_update>

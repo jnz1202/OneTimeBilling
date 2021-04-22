@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_list parent="" relationship="" sys_domain="global" table="x_nios2_onetimebil_one_time_bill" version="2" view="sys_ref_list">
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>u_bill_number</element>
+            <list_id display_value="x_nios2_onetimebil_one_time_bill" element="NULL" name="x_nios2_onetimebil_one_time_bill" parent="NULL" relationship="NULL" sys_domain="global" view="9c014333c823000013c41b64171225f8">213eba6edb4def00ca18f3840f961991</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>0</position>
+            <sum>false</sum>
+            <sys_created_by>d_zhangy</sys_created_by>
+            <sys_created_on>2018-10-12 19:54:48</sys_created_on>
+            <sys_id>a53eba6edb4def00ca18f3840f961991</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>d_zhangy</sys_updated_by>
+            <sys_updated_on>2018-10-12 19:54:48</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>u_service_provided</element>
+            <list_id display_value="x_nios2_onetimebil_one_time_bill" element="NULL" name="x_nios2_onetimebil_one_time_bill" parent="NULL" relationship="NULL" sys_domain="global" view="9c014333c823000013c41b64171225f8">213eba6edb4def00ca18f3840f961991</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>1</position>
+            <sum>false</sum>
+            <sys_created_by>d_zhangy</sys_created_by>
+            <sys_created_on>2018-10-12 19:54:48</sys_created_on>
+            <sys_id>293eba6edb4def00ca18f3840f961991</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>d_zhangy</sys_updated_by>
+            <sys_updated_on>2018-10-12 19:54:48</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element/>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <name>x_nios2_onetimebil_one_time_bill</name>
+            <parent/>
+            <position/>
+            <relationship/>
+            <sum>false</sum>
+            <sys_class_name>sys_ui_list</sys_class_name>
+            <sys_created_by>d_zhangy</sys_created_by>
+            <sys_created_on>2018-10-12 19:54:48</sys_created_on>
+            <sys_customer_update>false</sys_customer_update>
+            <sys_domain>global</sys_domain>
+            <sys_id>213eba6edb4def00ca18f3840f961991</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_nios2_onetimebil_one_time_bill</sys_name>
+            <sys_package display_value="One Time Billing" source="x_nios2_onetimebil">3f5dbd7edbe8a30004c77d1d0f961949</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="One Time Billing">3f5dbd7edbe8a30004c77d1d0f961949</sys_scope>
+            <sys_update_name>sys_ui_list_x_nios2_onetimebil_one_time_bill_sys_ref_list</sys_update_name>
+            <sys_updated_by>d_zhangy</sys_updated_by>
+            <sys_updated_on>2018-10-12 19:54:48</sys_updated_on>
+            <sys_user/>
+            <view display_value="Reference List" name="sys_ref_list">9c014333c823000013c41b64171225f8</view>
+            <view_name/>
+        </sys_ui_list>
+    </sys_ui_list>
+</record_update>

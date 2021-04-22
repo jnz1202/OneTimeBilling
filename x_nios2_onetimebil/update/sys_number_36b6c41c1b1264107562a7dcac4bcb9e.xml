@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_number">
+    <sys_number action="INSERT_OR_UPDATE">
+        <category display_value="" name="x_nios2_onetimebil_upload_work_order_file">x_nios2_onetimebil_upload_work_order_file</category>
+        <maximum_digits>7</maximum_digits>
+        <number>1000</number>
+        <prefix>WOF</prefix>
+        <sys_class_name>sys_number</sys_class_name>
+        <sys_created_by>cnssn</sys_created_by>
+        <sys_created_on>2021-02-08 18:49:55</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>36b6c41c1b1264107562a7dcac4bcb9e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>WOF</sys_name>
+        <sys_package display_value="One Time Billing" source="x_nios2_onetimebil">3f5dbd7edbe8a30004c77d1d0f961949</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="One Time Billing">3f5dbd7edbe8a30004c77d1d0f961949</sys_scope>
+        <sys_update_name>sys_number_36b6c41c1b1264107562a7dcac4bcb9e</sys_update_name>
+        <sys_updated_by>cnssn</sys_updated_by>
+        <sys_updated_on>2021-02-08 18:49:55</sys_updated_on>
+    </sys_number>
+</record_update>

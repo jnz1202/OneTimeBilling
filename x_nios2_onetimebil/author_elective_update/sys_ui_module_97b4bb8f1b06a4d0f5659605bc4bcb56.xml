@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_module">
+    <sys_ui_module action="DELETE">
+        <active>true</active>
+        <application display_value="One Time Billing">93b4bb8f1b06a4d0f5659605bc4bcb53</application>
+        <filter/>
+        <name>Upload PREP Work Orders</name>
+        <order/>
+        <path/>
+        <path_relative_to_root>false</path_relative_to_root>
+        <roles>x_nios2_onetimebil.upload_prep_work_order_user</roles>
+        <sys_class_name>sys_ui_module</sys_class_name>
+        <sys_created_by>cnssn</sys_created_by>
+        <sys_created_on>2021-02-05 14:57:24</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_id>97b4bb8f1b06a4d0f5659605bc4bcb56</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Upload PREP Work Orders</sys_name>
+        <sys_package display_value="One Time Billing" source="x_nios2_onetimebil">3f5dbd7edbe8a30004c77d1d0f961949</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="One Time Billing">3f5dbd7edbe8a30004c77d1d0f961949</sys_scope>
+        <sys_update_name>sys_ui_module_97b4bb8f1b06a4d0f5659605bc4bcb56</sys_update_name>
+        <sys_updated_by>cnssn</sys_updated_by>
+        <sys_updated_on>2021-02-05 14:57:24</sys_updated_on>
+        <table>x_nios2_onetimebil_upload_prep_work_order</table>
+        <uncancelable>false</uncancelable>
+        <view_name/>
+    </sys_ui_module>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="One Time Billing">3f5dbd7edbe8a30004c77d1d0f961949</application>
+        <comments/>
+        <file_path/>
+        <instance_id>5d010e26db5384901198b16a3296195c</instance_id>
+        <instance_name>nistdev</instance_name>
+        <name>sys_ui_module_97b4bb8f1b06a4d0f5659605bc4bcb56</name>
+        <order/>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_module"><sys_ui_module action="INSERT_OR_UPDATE"><active>true</active><application display_value="One Time Billing">93b4bb8f1b06a4d0f5659605bc4bcb53</application><filter/><name>Upload PREP Work Orders</name><order/><path/><path_relative_to_root>false</path_relative_to_root><roles>x_nios2_onetimebil.upload_prep_work_order_user</roles><sys_class_name>sys_ui_module</sys_class_name><sys_created_by>cnssn</sys_created_by><sys_created_on>2021-02-05 14:57:24</sys_created_on><sys_customer_update>false</sys_customer_update><sys_domain>global</sys_domain><sys_id>97b4bb8f1b06a4d0f5659605bc4bcb56</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Upload PREP Work Orders</sys_name><sys_package display_value="One Time Billing" source="x_nios2_onetimebil">3f5dbd7edbe8a30004c77d1d0f961949</sys_package><sys_policy/><sys_replace_on_upgrade>false</sys_replace_on_upgrade><sys_scope display_value="One Time Billing">3f5dbd7edbe8a30004c77d1d0f961949</sys_scope><sys_update_name>sys_ui_module_97b4bb8f1b06a4d0f5659605bc4bcb56</sys_update_name><sys_updated_by>cnssn</sys_updated_by><sys_updated_on>2021-02-05 14:57:24</sys_updated_on><table>x_nios2_onetimebil_upload_prep_work_order</table><uncancelable>false</uncancelable><view_name/></sys_ui_module></record_update>]]></payload>
+        <payload_hash>1826390811</payload_hash>
+        <record_name>Upload PREP Work Orders</record_name>
+        <reverted_from/>
+        <source>f0c20b441b92dc10f5659605bc4bcb44</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>cnssn</sys_created_by>
+        <sys_created_on>2021-02-05 14:57:24</sys_created_on>
+        <sys_id>17b4bb8f1b06a4d0f5659605bc4bcb59</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>17772b29c6c0000001</sys_recorded_at>
+        <sys_updated_by>cnssn</sys_updated_by>
+        <sys_updated_on>2021-02-05 14:57:24</sys_updated_on>
+        <type>Module</type>
+        <update_guid>1fb4bb8f5506a4d0d4c01ad29aa8f458</update_guid>
+        <update_guid_history>1fb4bb8f5506a4d0d4c01ad29aa8f458:1826390811</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>cnssn</sys_created_by>
+        <sys_created_on>2021-02-05 15:13:55</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_db_object display_value="" name="sys_ui_module">sys_ui_module</sys_db_object>
+        <sys_id>6cf4199bfecd4180a96b3e4c38391000</sys_id>
+        <sys_metadata>97b4bb8f1b06a4d0f5659605bc4bcb56</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Upload PREP Work Orders</sys_name>
+        <sys_package display_value="One Time Billing" source="x_nios2_onetimebil">3f5dbd7edbe8a30004c77d1d0f961949</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="One Time Billing">3f5dbd7edbe8a30004c77d1d0f961949</sys_scope>
+        <sys_scope_delete display_value="">10bdecfd6df0499c9ac08ab0c5e65664</sys_scope_delete>
+        <sys_update_name>sys_ui_module_97b4bb8f1b06a4d0f5659605bc4bcb56</sys_update_name>
+        <sys_update_version display_value="sys_ui_module_97b4bb8f1b06a4d0f5659605bc4bcb56">17b4bb8f1b06a4d0f5659605bc4bcb59</sys_update_version>
+        <sys_updated_by>cnssn</sys_updated_by>
+        <sys_updated_on>2021-02-05 15:13:55</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

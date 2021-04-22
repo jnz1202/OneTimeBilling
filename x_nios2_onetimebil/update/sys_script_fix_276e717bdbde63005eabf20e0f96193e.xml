@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_fix">
+    <sys_script_fix action="INSERT_OR_UPDATE">
+        <active>false</active>
+        <before>false</before>
+        <description/>
+        <flush_cache>false</flush_cache>
+        <name>load users to One time bill SMA group</name>
+        <record_for_rollback>false</record_for_rollback>
+        <run_once>true</run_once>
+        <script><![CDATA[var sma = new GlideRecord('u_organizational_unit'); 
+	sma.addQuery('u_id','IN', '00, 13, 18, 19');
+
+	sma.query();
+var smaList=[];
+	while (sma.next()){
+		smaList=sma.u_sma;
+		gs.info('users: ' + smaList.length);
+		for (var i=0; i<smaList.length; i++){
+		gs.info('users: ' + smaList[i]);
+			//add to one time bill admin group
+			var userGR = new GlideRecord('sys_user_grmember');
+//userGR.addQuery("group.name", 'One time Bill AO');
+userGR.initialize();
+    userGR.user = smaList[i];
+			
+	userGR.group = '16cbb9f7dbde63005eabf20e0f9619d3';
+		userGR.insert();
+		 //gs.info('Ao: ' + svs.primary_contact.name + ' division: ' + svs.name);}
+	 }}
+//gs.info('total ao: ' + count);
+
+
+
+]]></script>
+        <sys_class_name>sys_script_fix</sys_class_name>
+        <sys_created_by>d_jnz17</sys_created_by>
+        <sys_created_on>2018-12-17 15:47:01</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>276e717bdbde63005eabf20e0f96193e</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_name>load users to One time bill SMA group</sys_name>
+        <sys_package display_value="One Time Billing" source="x_nios2_onetimebil">3f5dbd7edbe8a30004c77d1d0f961949</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="One Time Billing">3f5dbd7edbe8a30004c77d1d0f961949</sys_scope>
+        <sys_update_name>sys_script_fix_276e717bdbde63005eabf20e0f96193e</sys_update_name>
+        <sys_updated_by>d_jnz17</sys_updated_by>
+        <sys_updated_on>2018-12-17 16:08:44</sys_updated_on>
+        <unloadable>false</unloadable>
+    </sys_script_fix>
+</record_update>

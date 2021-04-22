@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_action">
+    <sys_ui_action action="INSERT_OR_UPDATE">
+        <action_name>process_work_order_uwof</action_name>
+        <active>true</active>
+        <client>true</client>
+        <client_script_v2><![CDATA[function onClick(g_form) {
+
+}]]></client_script_v2>
+        <comments/>
+        <condition>gs.hasRole('x_nios2_onetimebil.upload_work_order_file_user') &amp;&amp; current.status=='pending'</condition>
+        <form_action>true</form_action>
+        <form_button>true</form_button>
+        <form_button_v2>false</form_button_v2>
+        <form_context_menu>false</form_context_menu>
+        <form_link>false</form_link>
+        <form_menu_button_v2>false</form_menu_button_v2>
+        <form_style/>
+        <hint/>
+        <isolate_script>false</isolate_script>
+        <list_action>false</list_action>
+        <list_banner_button>false</list_banner_button>
+        <list_button>false</list_button>
+        <list_choice>false</list_choice>
+        <list_context_menu>false</list_context_menu>
+        <list_link>false</list_link>
+        <list_save_with_form_button>false</list_save_with_form_button>
+        <list_style/>
+        <name>Process Work Order</name>
+        <onclick>ProcessWorkOrder()</onclick>
+        <order>100</order>
+        <script><![CDATA[function ProcessWorkOrder(){
+	var conf = confirm("Are you sure you want to process this Work Order File?");
+	if(conf == true){
+		gsftSubmit(null, g_form.getFormElement(), 'process_work_order_uwof');
+	}
+}
+
+if(typeof window == 'undefined') {
+	createOneTimeBill();
+}
+
+function createOneTimeBill() {
+
+	var att = new GlideRecord("sys_attachment");
+	att.addQuery("table_name", "x_nios2_onetimebil_upload_work_order_file");
+	att.addQuery("table_sys_id", current.sys_id);
+	att.query();
+	var number = att.getRowCount();
+	if(number != 1){
+		if(number == 0){
+			gs.addErrorMessage('Please attach at least one Work Order file.');
+			current.setAbortAction(true);
+		}
+		if(number > 1){
+			gs.addErrorMessage("Please attache only one Work Order file at a time."); 
+			current.setAbortAction(true);
+		}
+	}
+	else{
+		att.next();
+		var format = att.content_type.toString();
+		if(format != 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'){
+			gs.addErrorMessage("The upload file must be EXCEL file");
+			current.setAbortAction(true);
+		}
+		else {			
+			var otb = new GlideRecord('x_nios2_onetimebil_one_time_bill'); //Create new One Time Billing record
+			otb.initialize();
+			otb.u_service_provided = current.service_provided.sys_id;
+			otb.u_service_division = current.service_provided.u_service_division.sys_id;
+			otb.u_provider_ao = current.service_provided.u_service_division.primary_contact;
+			otb.u_fy = current.fy.sys_id.toString();
+			otb.u_service_amount = current.service_amount;
+			otb.u_customer_division = current.customer_division.sys_id;
+			otb.u_customer_name = current.customer_name.sys_id;
+			//otb.u_customer_ao = current.u_customer_ao.sys_id.toString();
+			var custAO = new GlideRecord('sys_user');
+			custAO.get(current.customer_ao.sys_id);
+			if (custAO)
+				otb.u_customer_ao = custAO.sys_id;
+			otb.insert();
+			var att_Id = att.sys_id.toString();
+			var otb_Id = otb.sys_id.toString();
+			var fy = current.fy.getDisplayValue();
+			parseFile(att_Id, otb_Id, fy);
+			current.status = 'processed';
+			current.one_time_bill = otb_Id;
+			current.update();
+			//action.setRedirectURL(current);
+			action.setRedirectURL(otb);
+		}
+	}
+}
+
+function parseFile(attId, otbId, fy){
+	var attachmentStream = new GlideSysAttachment().getContentStream(attId);
+	var parser = new sn_impex.GlideExcelParser();
+	parser.parse(attachmentStream);
+	var headers = parser.getColumnHeaders();
+	var header3 = headers[2]; //Associate Name
+	var header4 = headers[3]; //Fund Code
+	//var header5 = headers[4]; //FCFY
+	var header6 = headers[5]; //Reference #
+	var header7 = headers[6]; //PTC
+	var header9 = headers[8]; //Amount Paid
+	//gs.info("KS: " + header3 + " : " + header4 + " : " + header5 + " : " + header6 + " : " + header7 + " : " + header9); 
+
+	while(parser.next()) { 
+		var row = parser.getRow(); 
+		if(row[header9] != 0  && row[header9] != null){  //Amount Paid is not "0" or empty
+			var ptc = new GlideRecord('x_nios2_onetimebil_one_time_line_items'); //Customer PTCs (Project Task Code)
+			ptc.initialize();
+			ptc.u_bill_number = otbId;
+			var custPTC = new GlideRecord('u_project_task_code');
+			custPTC.addEncodedQuery('u_projecttask_code=' + row[header7]);
+			custPTC.query();
+			if(custPTC.next())
+				ptc.u_customer_ptc = custPTC.sys_id.toString();
+			ptc.req_no = row[header6];
+			var fc = row[header4];
+			fc = fc.replace(/^0+/, ''); //Remove leading zeros
+			ptc.u_fund_code = fc;
+			ptc.u_amount = row[header9];
+			var name = row[header3];
+			ptc.memo = name;
+			/* Not every name in the spread sheet can be found in sys_user table and is replaced by Memo field
+			var fComma = name.indexOf(",");  //index of first comma
+			var lComma = name.lastIndexOf(",");  //index of last comma
+			if(fComma >=0 && fComma == lComma){  //Only one "," in name string
+				var lName = name.split(",")[0];  //last name
+				var fName = name.split(",")[1];  //first name
+				fName = fName.trim();  //Remove the space in front of first name
+				//gs.info("KS: last name: " + lName + " first name: " + fName);
+				var cust = new GlideRecord('sys_user');
+				//including inactive users, adding "sys_idISNOTEMPTY" in front of query to avoid addActiveQuery() in "NIST user query" before query BR of sys_user table
+				var q = 'sys_idISNOTEMPTY^u_class!=4^last_name=' + lName + '^first_name=' + fName; // + '^active=true^ORactive=false'; 
+				cust.addEncodedQuery(q);
+				cust.query();
+				//gs.info("KS row count " + cust.getRowCount() + ' last_name=' + lName + ' first_name=' + fName);
+				if (cust.next())
+					ptc.u_customer = cust.sys_id.toString();
+				else {
+					ptc.memo = name;
+					ptc.u_customer = '';
+				}		
+			}
+			else {  //Without "," or more than one "," in name string
+				ptc.memo = name;
+				ptc.u_customer = '';
+			}  
+			*/			
+			//gs.info("KS: Customer PTC " + ptc.u_customer_ptc + " Req No " + ptc.req_no + " Fund Code " + ptc.u_fund_code + " Amount " + ptc.u_amount + " Customer ID " + ptc.u_customer);
+			ptc.insert();
+		}
+	}
+	parser.close();
+}]]></script>
+        <show_insert>true</show_insert>
+        <show_multiple_update>false</show_multiple_update>
+        <show_query>false</show_query>
+        <show_update>true</show_update>
+        <sys_class_name>sys_ui_action</sys_class_name>
+        <sys_created_by>cnssn</sys_created_by>
+        <sys_created_on>2021-02-08 19:40:06</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_id>6caf00d41b5264107562a7dcac4bcb8c</sys_id>
+        <sys_mod_count>95</sys_mod_count>
+        <sys_name>Process Work Order</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="One Time Billing" source="x_nios2_onetimebil">3f5dbd7edbe8a30004c77d1d0f961949</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="One Time Billing">3f5dbd7edbe8a30004c77d1d0f961949</sys_scope>
+        <sys_update_name>sys_ui_action_6caf00d41b5264107562a7dcac4bcb8c</sys_update_name>
+        <sys_updated_by>cnssn</sys_updated_by>
+        <sys_updated_on>2021-03-12 13:14:51</sys_updated_on>
+        <table>x_nios2_onetimebil_upload_work_order_file</table>
+        <ui11_compatible>true</ui11_compatible>
+        <ui16_compatible>false</ui16_compatible>
+    </sys_ui_action>
+</record_update>

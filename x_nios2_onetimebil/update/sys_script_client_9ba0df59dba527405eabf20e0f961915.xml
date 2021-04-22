@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description>Set service division</description>
+        <field>u_service_provided</field>
+        <global>true</global>
+        <isolate_script>false</isolate_script>
+        <messages/>
+        <name>Set service division</name>
+        <order/>
+        <script><![CDATA[function onChange(control, oldValue, newValue, isLoading, isTemplate) {
+   if (isLoading || newValue === '') {
+      return;
+   }
+	//alert("hi!");
+  var ref = g_form.getReference('u_service_provided',setFields);
+}
+function setFields(ref) {
+	//alert('div: '+ref.u_service_division);
+	g_form.setValue('u_service_division',ref.u_service_division);
+   
+}]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>d_jnz17</sys_created_by>
+        <sys_created_on>2018-11-02 20:34:28</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_id>9ba0df59dba527405eabf20e0f961915</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name>Set service division</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="One Time Billing" source="x_nios2_onetimebil">3f5dbd7edbe8a30004c77d1d0f961949</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="One Time Billing">3f5dbd7edbe8a30004c77d1d0f961949</sys_scope>
+        <sys_update_name>sys_script_client_9ba0df59dba527405eabf20e0f961915</sys_update_name>
+        <sys_updated_by>jnz1202</sys_updated_by>
+        <sys_updated_on>2021-04-14 10:56:06</sys_updated_on>
+        <table>x_nios2_onetimebil_one_time_bill</table>
+        <type>onChange</type>
+        <ui_type>0</ui_type>
+        <view/>
+    </sys_script_client>
+</record_update>

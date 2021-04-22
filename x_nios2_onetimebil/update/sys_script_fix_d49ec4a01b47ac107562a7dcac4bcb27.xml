@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_fix">
+    <sys_script_fix action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <before>false</before>
+        <description/>
+        <flush_cache>false</flush_cache>
+        <name>Tracy Test</name>
+        <record_for_rollback>false</record_for_rollback>
+        <run_once>true</run_once>
+        <script><![CDATA[processCosts();
+
+function processCosts() {
+   var CostProc = new FMCostProcessor_NIST_UnitCardCost();
+   CostProc.processDateRange("", "", gs.endOfYesterday());
+}]]></script>
+        <sys_class_name>sys_script_fix</sys_class_name>
+        <sys_created_by>gymt</sys_created_by>
+        <sys_created_on>2021-03-18 20:50:02</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>d49ec4a01b47ac107562a7dcac4bcb27</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Tracy Test</sys_name>
+        <sys_package display_value="One Time Billing" source="x_nios2_onetimebil">3f5dbd7edbe8a30004c77d1d0f961949</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="One Time Billing">3f5dbd7edbe8a30004c77d1d0f961949</sys_scope>
+        <sys_update_name>sys_script_fix_d49ec4a01b47ac107562a7dcac4bcb27</sys_update_name>
+        <sys_updated_by>gymt</sys_updated_by>
+        <sys_updated_on>2021-03-18 20:50:02</sys_updated_on>
+        <unloadable>false</unloadable>
+    </sys_script_fix>
+</record_update>

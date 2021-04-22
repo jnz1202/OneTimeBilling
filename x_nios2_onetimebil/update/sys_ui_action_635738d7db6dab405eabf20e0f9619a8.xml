@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_action">
+    <sys_ui_action action="INSERT_OR_UPDATE">
+        <action_name>delete_service</action_name>
+        <active>true</active>
+        <client>true</client>
+        <client_script_v2/>
+        <comments>Delete the serviceand all associated service PTCs</comments>
+        <condition>new one_time_bill_help().canDeleteService(current)</condition>
+        <form_action>true</form_action>
+        <form_button>true</form_button>
+        <form_button_v2>false</form_button_v2>
+        <form_context_menu>false</form_context_menu>
+        <form_link>false</form_link>
+        <form_menu_button_v2>false</form_menu_button_v2>
+        <form_style/>
+        <hint/>
+        <isolate_script>false</isolate_script>
+        <list_action>false</list_action>
+        <list_banner_button>false</list_banner_button>
+        <list_button>false</list_button>
+        <list_choice>false</list_choice>
+        <list_context_menu>false</list_context_menu>
+        <list_link>false</list_link>
+        <list_save_with_form_button>false</list_save_with_form_button>
+        <list_style/>
+        <name>Delete Service</name>
+        <onclick>deleteService()</onclick>
+        <order>100</order>
+        <script><![CDATA[function deleteService(){
+	if (confirm("Are you sure you want to delete this Service?  All associated PTCs will be deleted.")){
+		gsftSubmit(null, g_form.getFormElement(), 'delete_service');
+	}
+}
+
+if(typeof window == 'undefined')  
+   u_delete_service();
+
+function u_delete_service(){
+	current.u_active = false;
+current.update();
+action.setRedirectURL(current);
+}]]></script>
+        <show_insert>true</show_insert>
+        <show_multiple_update>false</show_multiple_update>
+        <show_query>false</show_query>
+        <show_update>true</show_update>
+        <sys_class_name>sys_ui_action</sys_class_name>
+        <sys_created_by>d_jnz17</sys_created_by>
+        <sys_created_on>2018-11-08 14:32:58</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_id>635738d7db6dab405eabf20e0f9619a8</sys_id>
+        <sys_mod_count>17</sys_mod_count>
+        <sys_name>Delete Service</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="One Time Billing" source="x_nios2_onetimebil">3f5dbd7edbe8a30004c77d1d0f961949</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="One Time Billing">3f5dbd7edbe8a30004c77d1d0f961949</sys_scope>
+        <sys_update_name>sys_ui_action_635738d7db6dab405eabf20e0f9619a8</sys_update_name>
+        <sys_updated_by>d_jnz17</sys_updated_by>
+        <sys_updated_on>2019-04-01 17:21:01</sys_updated_on>
+        <table>x_nios2_onetimebil_services_provided</table>
+        <ui11_compatible>true</ui11_compatible>
+        <ui16_compatible>false</ui16_compatible>
+    </sys_ui_action>
+</record_update>

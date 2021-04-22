@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element extends="cmdb_ci" label="Customer PTCs" max_length="40" name="x_nios2_onetimebil_one_time_line_items" sizeclass="6493" type="collection">
+        <element label="Memo" max_length="100" name="memo" type="string"/>
+        <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" dynamic_default_value="0d9c53c0db3ea2002156d20e0f96194d" label="Number" max_length="40" name="number" type="string" use_dynamic_default="true"/>
+        <element attributes="edge_encryption_enabled=true" label="Req No" max_length="40" name="req_no" type="string"/>
+        <element calculation="(function calculatedFieldValue(current) {&#13;&#10;&#13;&#10;&#9;// Add your code here&#13;&#10;&#9;return '';  // return the calculated value&#13;&#10;&#13;&#10;})(current);" label="Amount" max_length="50" name="u_amount" type="decimal"/>
+        <element calculation="(function calculatedFieldValue(current) {&#13;&#10;&#13;&#10;&#9;// Add your code here&#13;&#10;&#9;return '';  // return the calculated value&#13;&#10;&#13;&#10;})(current);" label="Bill Number" max_length="32" name="u_bill_number" reference="x_nios2_onetimebil_one_time_bill" reference_cascade_rule="cascade" type="reference"/>
+        <element calculation="(function calculatedFieldValue(current) {&#13;&#10;&#13;&#10;&#9;// Add your code here&#13;&#10;&#9;return '';  // return the calculated value&#13;&#10;&#13;&#10;})(current);" label="Customer" max_length="32" name="u_customer" reference="sys_user" type="reference"/>
+        <element calculation="(function calculatedFieldValue(current) {&#13;&#10;&#13;&#10;&#9;// Add your code here&#13;&#10;&#9;return current.u_customer_ptc.u_fund_code;  // return the calculated value&#13;&#10;&#13;&#10;})(current);" label="Fund Code" max_length="40" name="u_fund_code" read_only="true" type="string" use_dynamic_default="true" virtual="true"/>
+    </element>
+</database>

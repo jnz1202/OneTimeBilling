@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_app_module">
+    <sys_app_module action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <application display_value="One Time Billing">94fa1e7adb6ca30004c77d1d0f961943</application>
+        <assessment/>
+        <content_page/>
+        <device_type/>
+        <filter/>
+        <hint/>
+        <homepage/>
+        <image/>
+        <link_type>LIST</link_type>
+        <map_page/>
+        <mobile_title>One Time bills</mobile_title>
+        <mobile_view_name>Mobile</mobile_view_name>
+        <name>x_nios2_onetimebil_one_time_bill</name>
+        <order>500</order>
+        <override_menu_roles>false</override_menu_roles>
+        <query>&amp;sysparm_fixed_query=u_service_division.primary_contact=javascript:gs.getUserID()^ORu_service_division.u_organizational_unitINjavascript:x_nios2_onetimebil.getAoOu()^ORu_service_division.u_organizational_unit.u_smasLIKEjavascript:gs.getUserID()^NQu_service_division=javascript:x_nios2_onetimebil.getDivisionASD()</query>
+        <report/>
+        <roles>x_nios2_onetimebil.one_time_bill_AO,x_nios2_onetimebil.one_time_bill_asd_user,x_nios2_onetimebil.SMA_one_time_bill</roles>
+        <survey/>
+        <survey_overwrite>true</survey_overwrite>
+        <sys_class_name>sys_app_module</sys_class_name>
+        <sys_created_by>d_jnz17</sys_created_by>
+        <sys_created_on>2018-10-12 18:22:00</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_id>5af8aea2db09ef0004c77d1d0f9619ae</sys_id>
+        <sys_mod_count>37</sys_mod_count>
+        <sys_name>Manage Bills</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="One Time Billing" source="x_nios2_onetimebil">3f5dbd7edbe8a30004c77d1d0f961949</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="One Time Billing">3f5dbd7edbe8a30004c77d1d0f961949</sys_scope>
+        <sys_update_name>sys_app_module_5af8aea2db09ef0004c77d1d0f9619ae</sys_update_name>
+        <sys_updated_by>jnz1202</sys_updated_by>
+        <sys_updated_on>2021-03-30 11:19:21</sys_updated_on>
+        <timeline_page/>
+        <title>Manage Bills</title>
+        <uncancelable>false</uncancelable>
+        <view_name>ao_view</view_name>
+        <window_name/>
+    </sys_app_module>
+</record_update>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_fix">
+    <sys_script_fix action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <before>false</before>
+        <description/>
+        <flush_cache>false</flush_cache>
+        <name>one time bill</name>
+        <record_for_rollback>false</record_for_rollback>
+        <run_once>true</run_once>
+        <script><![CDATA[/*var cert = new GlideRecord('x_nios2_onetimebil_services_provided');
+
+cert.query();
+//gs.info('eamil: ');
+while (cert.next()){
+	//gs.info('eamil: ' + cert.u_contact_email);
+	var gr = new GlideRecord('sys_user');
+    // user.addQuery('user.first_name', cert.u_contact_first_name);
+	//user.addQuery('user.last_name', cert.u_contact_last_name);
+	//user.addQuery('user.u_division', cert.u_service_division);
+	gr.addQuery('email', cert.u_contact_email);
+     gr.query();
+	if (gr.next()){
+		//gs.info('gr name: ' + gr.name);
+		cert.u_point_of_contact = gr.sys_id;
+		cert.update();
+	}
+	
+	
+}
+//insert ptc code
+	var Otb= new GlideRecord('x_nios2_onetimebil_service_ptc');
+	Otb.query();
+	while(Otb.next()){
+		var ptc = Otb.u_service_project + '-' + Otb.u_service_task;
+		//get sys_id 
+		var p = GlideRecord('u_project_task_code');
+		p.addQuery('u_projecttask_code', ptc);
+		p.query();
+		if (p.next()){
+		//gs.info('ptc: ' + ptc);
+		Otb.u_service_ptc = p;
+		
+		Otb.update();
+		}
+	}
+	*/
+var user= new GlideRecord('sys_user');
+	user.addQuery('user_name', 'tcb3');
+	user.query();
+	if (user.next())
+		
+		gs.info('user sys_id:  ' + user.sys_id + ' users email:  ' + user.email);
+	
+else
+	gs.info('no user by this name');]]></script>
+        <sys_class_name>sys_script_fix</sys_class_name>
+        <sys_created_by>d_jnz17</sys_created_by>
+        <sys_created_on>2018-10-10 15:01:03</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>07b7a7f5db896f0004c77d1d0f961980</sys_id>
+        <sys_mod_count>83</sys_mod_count>
+        <sys_name>one time bill</sys_name>
+        <sys_package display_value="One Time Billing" source="x_nios2_onetimebil">3f5dbd7edbe8a30004c77d1d0f961949</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="One Time Billing">3f5dbd7edbe8a30004c77d1d0f961949</sys_scope>
+        <sys_update_name>sys_script_fix_07b7a7f5db896f0004c77d1d0f961980</sys_update_name>
+        <sys_updated_by>d_jnz17</sys_updated_by>
+        <sys_updated_on>2019-03-01 19:14:41</sys_updated_on>
+        <unloadable>false</unloadable>
+    </sys_script_fix>
+</record_update>

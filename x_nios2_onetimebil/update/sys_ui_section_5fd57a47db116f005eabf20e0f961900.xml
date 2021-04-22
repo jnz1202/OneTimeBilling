@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_section caption="" section_id="5fd57a47db116f005eabf20e0f961900" sys_domain="global" table="x_nios2_onetimebil_one_time_bill" version="3" view="add_bill">
+        <sys_ui_annotation action="INSERT_OR_UPDATE">
+            <is_plain_text>false</is_plain_text>
+            <sys_created_by>d_zhangy</sys_created_by>
+            <sys_created_on>2019-06-12 16:57:23</sys_created_on>
+            <sys_id>84ffa170db02ff00ca18f3840f96194e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>d_zhangy</sys_updated_by>
+            <sys_updated_on>2019-06-12 16:57:23</sys_updated_on>
+            <text>&lt;b&gt;&lt;i&gt;Please enter the service provided, FY, service amount, customer name, and click Save.  Verify your project task code and click Send Bill.&lt;/i&gt;&lt;/b&gt;</text>
+            <type display_value="Info Box Red">823f88a80f930000b12e6903cfe01209</type>
+        </sys_ui_annotation>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>84ffa170db02ff00ca18f3840f96194e</element>
+            <position>0</position>
+            <sys_created_by>d_zhangy</sys_created_by>
+            <sys_created_on>2019-06-12 16:57:23</sys_created_on>
+            <sys_id>48ffa170db02ff00ca18f3840f96194e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_nios2_onetimebil_one_time_bill" sys_domain="global" view="dbd53a47db116f005eabf20e0f9619fa">5fd57a47db116f005eabf20e0f961900</sys_ui_section>
+            <sys_updated_by>d_zhangy</sys_updated_by>
+            <sys_updated_on>2019-06-12 16:57:23</sys_updated_on>
+            <sys_user/>
+            <type>annotation</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.begin_split</element>
+            <position>1</position>
+            <sys_created_by>d_zhangy</sys_created_by>
+            <sys_created_on>2019-06-12 16:57:23</sys_created_on>
+            <sys_id>c8ffa170db02ff00ca18f3840f96194e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_nios2_onetimebil_one_time_bill" sys_domain="global" view="dbd53a47db116f005eabf20e0f9619fa">5fd57a47db116f005eabf20e0f961900</sys_ui_section>
+            <sys_updated_by>d_zhangy</sys_updated_by>
+            <sys_updated_on>2019-06-12 16:57:23</sys_updated_on>
+            <sys_user/>
+            <type>.begin_split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_service_provided</element>
+            <position>2</position>
+            <sys_created_by>d_zhangy</sys_created_by>
+            <sys_created_on>2019-06-12 16:57:23</sys_created_on>
+            <sys_id>4cffa170db02ff00ca18f3840f96194e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_nios2_onetimebil_one_time_bill" sys_domain="global" view="dbd53a47db116f005eabf20e0f9619fa">5fd57a47db116f005eabf20e0f961900</sys_ui_section>
+            <sys_updated_by>d_zhangy</sys_updated_by>
+            <sys_updated_on>2019-06-12 16:57:23</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_fy</element>
+            <position>3</position>
+            <sys_created_by>d_zhangy</sys_created_by>
+            <sys_created_on>2019-06-12 16:57:23</sys_created_on>
+            <sys_id>ccffa170db02ff00ca18f3840f96194e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_nios2_onetimebil_one_time_bill" sys_domain="global" view="dbd53a47db116f005eabf20e0f9619fa">5fd57a47db116f005eabf20e0f961900</sys_ui_section>
+            <sys_updated_by>d_zhangy</sys_updated_by>
+            <sys_updated_on>2019-06-12 16:57:23</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_service_amount</element>
+            <position>4</position>
+            <sys_created_by>d_zhangy</sys_created_by>
+            <sys_created_on>2019-06-12 16:57:23</sys_created_on>
+            <sys_id>40ffa170db02ff00ca18f3840f96194f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_nios2_onetimebil_one_time_bill" sys_domain="global" view="dbd53a47db116f005eabf20e0f9619fa">5fd57a47db116f005eabf20e0f961900</sys_ui_section>
+            <sys_updated_by>d_zhangy</sys_updated_by>
+            <sys_updated_on>2019-06-12 16:57:23</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.split</element>
+            <position>5</position>
+            <sys_created_by>d_zhangy</sys_created_by>
+            <sys_created_on>2019-06-12 16:57:23</sys_created_on>
+            <sys_id>c0ffa170db02ff00ca18f3840f96194f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_nios2_onetimebil_one_time_bill" sys_domain="global" view="dbd53a47db116f005eabf20e0f9619fa">5fd57a47db116f005eabf20e0f961900</sys_ui_section>
+            <sys_updated_by>d_zhangy</sys_updated_by>
+            <sys_updated_on>2019-06-12 16:57:23</sys_updated_on>
+            <sys_user/>
+            <type>.split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_customer_name</element>
+            <position>6</position>
+            <sys_created_by>d_zhangy</sys_created_by>
+            <sys_created_on>2019-06-12 16:57:23</sys_created_on>
+            <sys_id>44ffa170db02ff00ca18f3840f96194f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_nios2_onetimebil_one_time_bill" sys_domain="global" view="dbd53a47db116f005eabf20e0f9619fa">5fd57a47db116f005eabf20e0f961900</sys_ui_section>
+            <sys_updated_by>d_zhangy</sys_updated_by>
+            <sys_updated_on>2019-06-12 16:57:23</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_customer_division</element>
+            <position>7</position>
+            <sys_created_by>d_zhangy</sys_created_by>
+            <sys_created_on>2019-06-12 16:57:23</sys_created_on>
+            <sys_id>c4ffa170db02ff00ca18f3840f96194f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_nios2_onetimebil_one_time_bill" sys_domain="global" view="dbd53a47db116f005eabf20e0f9619fa">5fd57a47db116f005eabf20e0f961900</sys_ui_section>
+            <sys_updated_by>d_zhangy</sys_updated_by>
+            <sys_updated_on>2019-06-12 16:57:23</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_customer_ao</element>
+            <position>8</position>
+            <sys_created_by>d_zhangy</sys_created_by>
+            <sys_created_on>2019-06-12 16:57:23</sys_created_on>
+            <sys_id>48ffa170db02ff00ca18f3840f96194f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_nios2_onetimebil_one_time_bill" sys_domain="global" view="dbd53a47db116f005eabf20e0f9619fa">5fd57a47db116f005eabf20e0f961900</sys_ui_section>
+            <sys_updated_by>d_zhangy</sys_updated_by>
+            <sys_updated_on>2019-06-12 16:57:23</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.end_split</element>
+            <position>9</position>
+            <sys_created_by>d_zhangy</sys_created_by>
+            <sys_created_on>2019-06-12 16:57:23</sys_created_on>
+            <sys_id>c8ffa170db02ff00ca18f3840f96194f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_nios2_onetimebil_one_time_bill" sys_domain="global" view="dbd53a47db116f005eabf20e0f9619fa">5fd57a47db116f005eabf20e0f961900</sys_ui_section>
+            <sys_updated_by>d_zhangy</sys_updated_by>
+            <sys_updated_on>2019-06-12 16:57:23</sys_updated_on>
+            <sys_user/>
+            <type>.end_split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_comments</element>
+            <position>10</position>
+            <sys_created_by>d_zhangy</sys_created_by>
+            <sys_created_on>2019-06-12 16:57:23</sys_created_on>
+            <sys_id>4cffa170db02ff00ca18f3840f96194f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_nios2_onetimebil_one_time_bill" sys_domain="global" view="dbd53a47db116f005eabf20e0f9619fa">5fd57a47db116f005eabf20e0f961900</sys_ui_section>
+            <sys_updated_by>d_zhangy</sys_updated_by>
+            <sys_updated_on>2019-06-12 16:57:23</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_service_division</element>
+            <position>11</position>
+            <sys_created_by>d_zhangy</sys_created_by>
+            <sys_created_on>2019-06-12 16:57:23</sys_created_on>
+            <sys_id>ccffa170db02ff00ca18f3840f96194f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_nios2_onetimebil_one_time_bill" sys_domain="global" view="dbd53a47db116f005eabf20e0f9619fa">5fd57a47db116f005eabf20e0f961900</sys_ui_section>
+            <sys_updated_by>d_zhangy</sys_updated_by>
+            <sys_updated_on>2019-06-12 16:57:23</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_provider_ao</element>
+            <position>12</position>
+            <sys_created_by>d_zhangy</sys_created_by>
+            <sys_created_on>2019-06-12 16:57:23</sys_created_on>
+            <sys_id>40ffa170db02ff00ca18f3840f961950</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_nios2_onetimebil_one_time_bill" sys_domain="global" view="dbd53a47db116f005eabf20e0f9619fa">5fd57a47db116f005eabf20e0f961900</sys_ui_section>
+            <sys_updated_by>d_zhangy</sys_updated_by>
+            <sys_updated_on>2019-06-12 16:57:23</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>change_poc</element>
+            <position>13</position>
+            <sys_created_by>d_zhangy</sys_created_by>
+            <sys_created_on>2019-06-12 16:57:23</sys_created_on>
+            <sys_id>c0ffa170db02ff00ca18f3840f961950</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_nios2_onetimebil_one_time_bill" sys_domain="global" view="dbd53a47db116f005eabf20e0f9619fa">5fd57a47db116f005eabf20e0f961900</sys_ui_section>
+            <sys_updated_by>d_zhangy</sys_updated_by>
+            <sys_updated_on>2019-06-12 16:57:23</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_section action="INSERT_OR_UPDATE">
+            <caption/>
+            <header>false</header>
+            <name>x_nios2_onetimebil_one_time_bill</name>
+            <roles/>
+            <sys_class_name>sys_ui_section</sys_class_name>
+            <sys_created_by>d_jnz17</sys_created_by>
+            <sys_created_on>2018-10-26 18:50:59</sys_created_on>
+            <sys_customer_update>false</sys_customer_update>
+            <sys_domain>global</sys_domain>
+            <sys_id>5fd57a47db116f005eabf20e0f961900</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_nios2_onetimebil_one_time_bill</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="One Time Billing" source="x_nios2_onetimebil">3f5dbd7edbe8a30004c77d1d0f961949</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="One Time Billing">3f5dbd7edbe8a30004c77d1d0f961949</sys_scope>
+            <sys_update_name>sys_ui_section_5fd57a47db116f005eabf20e0f961900</sys_update_name>
+            <sys_updated_by>d_jnz17</sys_updated_by>
+            <sys_updated_on>2018-10-26 18:50:59</sys_updated_on>
+            <sys_user/>
+            <title>false</title>
+            <view display_value="add_bill" name="add_bill">dbd53a47db116f005eabf20e0f9619fa</view>
+            <view_name/>
+        </sys_ui_section>
+    </sys_ui_section>
+</record_update>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_action">
+    <sys_ui_action action="INSERT_OR_UPDATE">
+        <action_name>resend_bill_to_customer</action_name>
+        <active>true</active>
+        <client>true</client>
+        <client_script_v2/>
+        <comments>AO can only resend bill in pending status, which generates another email to the customer AO.Resend bill should have validated provider PTCs and customer PTCs, the amount should be match. notification should be send to customer.</comments>
+        <condition>new one_time_bill_help().canResendBill(current)</condition>
+        <form_action>true</form_action>
+        <form_button>true</form_button>
+        <form_button_v2>false</form_button_v2>
+        <form_context_menu>false</form_context_menu>
+        <form_link>false</form_link>
+        <form_menu_button_v2>false</form_menu_button_v2>
+        <form_style/>
+        <hint/>
+        <isolate_script>false</isolate_script>
+        <list_action>false</list_action>
+        <list_banner_button>false</list_banner_button>
+        <list_button>false</list_button>
+        <list_choice>false</list_choice>
+        <list_context_menu>false</list_context_menu>
+        <list_link>false</list_link>
+        <list_save_with_form_button>false</list_save_with_form_button>
+        <list_style/>
+        <name>Resend Bill</name>
+        <onclick>checkAmount()</onclick>
+        <order>200</order>
+        <script><![CDATA[function checkAmount(){
+	
+	gsftSubmit(null, g_form.getFormElement(), 'resend_bill_to_customer');
+}
+
+//Code that runs without 'onclick'
+//Ensure call to server-side function with no browser errors
+if(typeof window == 'undefined')
+	setStaus();
+
+
+function setStaus(){
+	
+	
+	//check provider ptc
+	var billAmount =0;
+	
+	billAmount = current.u_service_amount;
+	
+	var totalAmount =0 ;
+	//gs.info('in resend');
+	var otb = new GlideRecord('x_nios2_onetimebil_provider_ptc');
+	otb.addQuery('u_bill.u_bill_number', current.u_bill_number);
+	otb.query();
+	while(otb.next()) {
+		if (otb.u_amount!=''){
+		    totalAmount = totalAmount + parseFloat(otb.u_amount);
+		}
+		//else{
+		//	gs.addInfoMessage('The amount of provider PTC cannot be empty.');
+		//current.setAbortAction(true);
+		//}
+	}
+	totalAmount = totalAmount.toFixed(2);
+	billAmount = parseFloat(billAmount).toFixed(2);
+	if (totalAmount != billAmount){
+		gs.addInfoMessage('Service amount must be equal to the total of provider amount.');
+		current.setAbortAction(true);
+	}
+	else{
+	
+	 gs.eventQueue("x_nios2_onetimebil.one_time_bill.resend", current, current.u_customer_name, current.u_customer_ao);
+	 gs.addInfoMessage('Bill has been resent.');
+	 action.setRedirectURL(current);
+	}
+	
+}
+]]></script>
+        <show_insert>false</show_insert>
+        <show_multiple_update>false</show_multiple_update>
+        <show_query>false</show_query>
+        <show_update>true</show_update>
+        <sys_class_name>sys_ui_action</sys_class_name>
+        <sys_created_by>d_jnz17</sys_created_by>
+        <sys_created_on>2018-11-05 21:39:23</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_id>b74c3e12db2de7405eabf20e0f9619e7</sys_id>
+        <sys_mod_count>18</sys_mod_count>
+        <sys_name>Resend Bill</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="One Time Billing" source="x_nios2_onetimebil">3f5dbd7edbe8a30004c77d1d0f961949</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="One Time Billing">3f5dbd7edbe8a30004c77d1d0f961949</sys_scope>
+        <sys_update_name>sys_ui_action_b74c3e12db2de7405eabf20e0f9619e7</sys_update_name>
+        <sys_updated_by>d_jnz17</sys_updated_by>
+        <sys_updated_on>2019-04-25 16:29:33</sys_updated_on>
+        <table>x_nios2_onetimebil_one_time_bill</table>
+        <ui11_compatible>true</ui11_compatible>
+        <ui16_compatible>false</ui16_compatible>
+    </sys_ui_action>
+</record_update>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element attributes="hasLabels=true" label="One Time bill" max_length="40" name="x_nios2_onetimebil_one_time_bill" sizeclass="2099" type="collection">
+        <element calculation="(function calculatedFieldValue(current) {&#13;&#10;&#13;&#10;&#9;// Add your code here&#13;&#10;&#9;return '';  // return the calculated value&#13;&#10;&#13;&#10;})(current);" label="I want to list me as Point of Contact (Default POC is AO)" max_length="40" name="change_poc" type="boolean"/>
+        <element calculation="(function calculatedFieldValue(current) {&#13;&#10;&#13;&#10;&#9;// Add your code here&#13;&#10;        var totalAmount =0 ;&#13;&#10;&#9;&#13;&#10;&#9;var otb = new GlideRecord('x_nios2_onetimebil_one_time_line_items');&#13;&#10;&#9;otb.addQuery('u_bill_number.u_bill_number', current.u_bill_number);&#13;&#10;&#9;otb.query();&#13;&#10;&#9;while(otb.next()) {&#13;&#10;&#9;&#9;//check empty amount if ptc exist&#13;&#10;&#9;&#9;if (otb.u_amount !=''){&#13;&#10;&#9;&#9;    totalAmount = totalAmount + parseFloat(otb.u_amount);&#13;&#10;&#9;&#9;}&#13;&#10;&#9;}&#13;&#10;&#9;totalAmount = totalAmount.toFixed(2);&#13;&#10;&#9;return totalAmount;  // return the calculated value&#13;&#10;&#13;&#10;})(current);" label="Customer Amount Total" max_length="20" name="customer_amount_total" type="decimal" virtual="true"/>
+        <element calculation="(function calculatedFieldValue(current) {&#13;&#10;&#13;&#10;&#9;// Add your code here&#13;&#10;&#9;return '';  // return the calculated value&#13;&#10;&#13;&#10;})(current);" default="javascript:getNextObjNumberPadded();" display="true" dynamic_default_value="fdcb83a85f220100a9ad2572f2b4773c" label="Bill Number" max_length="10" name="u_bill_number" read_only="true" type="string" use_dynamic_default="true"/>
+        <element calculation="(function calculatedFieldValue(current) {&#13;&#10;&#13;&#10;&#9;// Add your code here&#13;&#10;&#9;return '';  // return the calculated value&#13;&#10;&#13;&#10;})(current);" label="Comments" max_length="4000" name="u_comments" type="string"/>
+        <element calculation="(function calculatedFieldValue(current) {&#13;&#10;&#13;&#10;&#9;// Add your code here&#13;&#10;&#9;return '';  // return the calculated value&#13;&#10;&#13;&#10;})(current);" label="Customer AO" mandatory="true" max_length="32" name="u_customer_ao" reference="sys_user" reference_qual="active=true^u_class=1^EQ" reference_qual_condition="active=true^u_class=1^EQ" type="reference"/>
+        <element calculation="(function calculatedFieldValue(current) {&#13;&#10;&#13;&#10;&#9;// Add your code here&#13;&#10;if (current.u_customer_name!=''){&#13;&#10;return current.u_customer_name.u_division;&#13;&#10;}&#13;&#10;else{&#13;&#10;&#9;return '';  // return the calculated value&#13;&#10;}&#13;&#10;})(current);" label="Customer Division" max_length="32" name="u_customer_division" reference="cmn_department" reference_qual="u_active=true^sys_class_name=cmn_department^EQ" reference_qual_condition="u_active=true^sys_class_name=cmn_department^EQ" type="reference"/>
+        <element calculation="(function calculatedFieldValue(current) {&#13;&#10;&#13;&#10;&#9;// Add your code here&#13;&#10;&#9;return '';  // return the calculated value&#13;&#10;&#13;&#10;})(current);" label="Customer Name" mandatory="true" max_length="32" name="u_customer_name" reference="sys_user" reference_qual="u_class=1^active=true^EQ" reference_qual_condition="u_class=1^active=true^EQ" type="reference"/>
+        <element calculation="(function calculatedFieldValue(current) {&#13;&#10;&#13;&#10;&#9;// Add your code here&#13;&#10;&#9;return '';  // return the calculated value&#13;&#10;&#13;&#10;})(current);" label="Date Sent" max_length="40" name="u_date_sent" type="glide_date"/>
+        <element calculation="(function calculatedFieldValue(current) {&#13;&#10;&#13;&#10;&#9;// Add your code here&#13;&#10;&#9;return '';  // return the calculated value&#13;&#10;&#13;&#10;})(current);" label="Disapproval Reason" max_length="4000" name="u_disapproval_reason" type="string"/>
+        <element calculation="(function calculatedFieldValue(current) {&#13;&#10;&#13;&#10;&#9;// Add your code here&#13;&#10;&#9;return '';  // return the calculated value&#13;&#10;&#13;&#10;})(current);" label="FY" mandatory="true" max_length="32" name="u_fy" read_only="true" reference="u_fiscal_year" type="reference"/>
+        <element calculation="(function calculatedFieldValue(current) {&#13;&#10;&#13;&#10;&#9;// Add your code here&#13;&#10;&#9;return '';  // return the calculated value&#13;&#10;&#13;&#10;})(current);" label="Service Provider AO" max_length="32" name="u_provider_ao" reference="sys_user" reference_qual="active=true^u_class=1^EQ" reference_qual_condition="active=true^u_class=1^EQ" type="reference"/>
+        <element calculation="(function calculatedFieldValue(current) {&#13;&#10;&#13;&#10;&#9;// Add your code here&#13;&#10;&#9;return '';  // return the calculated value&#13;&#10;&#13;&#10;})(current);" label="Service Amount" mandatory="true" max_length="50" name="u_service_amount" type="decimal"/>
+        <element calculation="(function calculatedFieldValue(current) {&#13;&#10;&#13;&#10;&#9;// Add your code here&#13;&#10;&#9;return '';  // return the calculated value&#13;&#10;&#13;&#10;})(current);" label="Service Division" max_length="32" name="u_service_division" reference="cmn_department" reference_qual="u_active=true^sys_class_name=cmn_department^EQ" reference_qual_condition="u_active=true^sys_class_name=cmn_department^EQ" type="reference"/>
+        <element calculation="(function calculatedFieldValue(current) {&#13;&#10;&#13;&#10;&#9;// Add your code here&#13;&#10;&#9;return '';  // return the calculated value&#13;&#10;&#13;&#10;})(current);" label="Service Provided" mandatory="true" max_length="32" name="u_service_provided" reference="x_nios2_onetimebil_services_provided" reference_qual="u_service_division.u_organizational_unitINjavascript:x_nios2_onetimebil.getAoOu()^ORu_service_division.primary_contact=javascript:gs.getUserID()^ORu_service_division.u_organizational_unit.u_smasLIKEjavascript:gs.getUserID()^u_active=true^NQu_service_division=javascript:x_nios2_onetimebil.getASDDivision();^u_active=true" reference_qual_condition="u_service_division.u_organizational_unitINjavascript:x_nios2_onetimebil.getAoOu()^ORu_service_division.primary_contact=javascript:gs.getUserID()^ORu_service_division.u_organizational_unit.u_smasLIKEjavascript:gs.getUserID()^u_active=true^NQu_service_divis" type="reference" use_dependent_field="true"/>
+        <element calculation="(function calculatedFieldValue(current) {&#13;&#10;&#13;&#10;&#9;// Add your code here&#13;&#10;&#9;return '';  // return the calculated value&#13;&#10;&#13;&#10;})(current);" choice="1" default="Draft" label="Bill Status" max_length="40" name="u_status" read_only="true" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Approved" value="Approved"/>
+                <element inactive_on_update="false" label="Billed" value="Billed"/>
+                <element inactive_on_update="false" label="Canceled" value="Canceled"/>
+                <element inactive_on_update="false" label="Disapproved" value="Disapproved"/>
+                <element inactive_on_update="false" label="Draft" value="Draft"/>
+                <element inactive_on_update="false" label="Pending" value="Pending"/>
+                <element inactive_on_update="false" label="SLT Created" value="Slt_created"/>
+            </choice>
+        </element>
+        <index name="index">
+            <element name="u_service_division"/>
+        </index>
+        <index name="index2">
+            <element name="u_service_provided"/>
+        </index>
+        <index name="index3">
+            <element name="u_customer_division"/>
+        </index>
+        <index name="index4">
+            <element name="u_customer_ao"/>
+        </index>
+        <index name="index5">
+            <element name="u_fy"/>
+        </index>
+        <index name="index6">
+            <element name="u_provider_ao"/>
+        </index>
+        <index name="index7">
+            <element name="u_customer_name"/>
+        </index>
+    </element>
+</database>

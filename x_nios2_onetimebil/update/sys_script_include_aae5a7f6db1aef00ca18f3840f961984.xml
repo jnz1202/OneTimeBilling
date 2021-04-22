@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_nios2_onetimebil.getDivisionASD</api_name>
+        <caller_access/>
+        <client_callable>true</client_callable>
+        <description/>
+        <name>getDivisionASD</name>
+        <script><![CDATA[function getDivisionASD(){
+	
+	var uDiv = new GlideRecord('x_nios2_onetimebil_asd_users');
+	uDiv.addQuery('u_user', gs.getUserID());
+	
+	uDiv.query();
+	if(uDiv.next()) {
+		
+		return uDiv.u_division;
+	}
+	
+}
+]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>d_jnz17</sys_created_by>
+        <sys_created_on>2018-12-14 20:45:14</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>aae5a7f6db1aef00ca18f3840f961984</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>getDivisionASD</sys_name>
+        <sys_package display_value="One Time Billing" source="x_nios2_onetimebil">3f5dbd7edbe8a30004c77d1d0f961949</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="One Time Billing">3f5dbd7edbe8a30004c77d1d0f961949</sys_scope>
+        <sys_update_name>sys_script_include_aae5a7f6db1aef00ca18f3840f961984</sys_update_name>
+        <sys_updated_by>d_jnz17</sys_updated_by>
+        <sys_updated_on>2018-12-14 20:45:14</sys_updated_on>
+    </sys_script_include>
+</record_update>

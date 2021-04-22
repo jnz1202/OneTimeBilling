@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_dictionary_override">
+    <sys_dictionary_override action="INSERT_OR_UPDATE">
+        <attributes/>
+        <attributes_override>false</attributes_override>
+        <base_table>cmdb_ci</base_table>
+        <calculation/>
+        <calculation_override>false</calculation_override>
+        <default_value/>
+        <default_value_override>false</default_value_override>
+        <dependent/>
+        <dependent_override>false</dependent_override>
+        <display_override>false</display_override>
+        <element>u_customer_ptc</element>
+        <mandatory>false</mandatory>
+        <mandatory_override>false</mandatory_override>
+        <name>x_nios2_onetimebil_one_time_line_items</name>
+        <read_only>false</read_only>
+        <read_only_override>false</read_only_override>
+        <reference_qual>u_valid=true</reference_qual>
+        <reference_qual_override>true</reference_qual_override>
+        <sys_class_name>sys_dictionary_override</sys_class_name>
+        <sys_created_by>jnz1202</sys_created_by>
+        <sys_created_on>2020-08-31 20:22:38</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>221353581bcbd090b96a98ad9c4bcbec</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>u_customer_ptc</sys_name>
+        <sys_package display_value="One Time Billing" source="x_nios2_onetimebil">3f5dbd7edbe8a30004c77d1d0f961949</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="One Time Billing">3f5dbd7edbe8a30004c77d1d0f961949</sys_scope>
+        <sys_update_name>sys_dictionary_override_221353581bcbd090b96a98ad9c4bcbec</sys_update_name>
+        <sys_updated_by>jnz1202</sys_updated_by>
+        <sys_updated_on>2020-08-31 20:22:38</sys_updated_on>
+    </sys_dictionary_override>
+</record_update>

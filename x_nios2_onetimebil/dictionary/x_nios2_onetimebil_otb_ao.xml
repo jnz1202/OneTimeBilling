@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="OTB AO" max_length="40" name="x_nios2_onetimebil_otb_ao" sizeclass="5" type="collection">
+        <element calculation="(function calculatedFieldValue(current) {&#13;&#10;&#13;&#10;&#9;// Add your code here&#13;&#10;&#9;return '';  // return the calculated value&#13;&#10;&#13;&#10;})(current);" label="Organization code" max_length="32" name="u_organization_code" reference="u_organizational_unit" reference_cascade_rule="cascade" type="reference"/>
+        <index name="index">
+            <element name="u_organization_code"/>
+        </index>
+    </element>
+</database>

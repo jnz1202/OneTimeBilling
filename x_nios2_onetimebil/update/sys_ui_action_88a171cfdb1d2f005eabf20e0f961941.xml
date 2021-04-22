@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_action">
+    <sys_ui_action action="INSERT_OR_UPDATE">
+        <action_name>approve_bill_by_customer</action_name>
+        <active>true</active>
+        <client>true</client>
+        <client_script_v2/>
+        <comments>Approve bill should have validated customer PTCs and customer PTCs, the amount should be match. notification should be send to provider.</comments>
+        <condition>current.u_status =='Pending' &amp;&amp; current.u_customer_ao == gs.getUserID()</condition>
+        <form_action>true</form_action>
+        <form_button>true</form_button>
+        <form_button_v2>false</form_button_v2>
+        <form_context_menu>false</form_context_menu>
+        <form_link>false</form_link>
+        <form_menu_button_v2>false</form_menu_button_v2>
+        <form_style/>
+        <hint/>
+        <isolate_script>false</isolate_script>
+        <list_action>false</list_action>
+        <list_banner_button>false</list_banner_button>
+        <list_button>false</list_button>
+        <list_choice>false</list_choice>
+        <list_context_menu>false</list_context_menu>
+        <list_link>false</list_link>
+        <list_save_with_form_button>false</list_save_with_form_button>
+        <list_style/>
+        <name>Approve Bill</name>
+        <onclick>checkAmount()</onclick>
+        <order>300</order>
+        <script><![CDATA[function checkAmount(){
+	
+	gsftSubmit(null, g_form.getFormElement(), 'approve_bill_by_customer');
+}
+
+//Code that runs without 'onclick'
+//Ensure call to server-side function with no browser errors
+if(typeof window == 'undefined')
+	setStaus();
+
+
+function setStaus(){
+	//check customer ptc
+	var billAmount =0;
+	
+	billAmount = current.u_service_amount;
+	
+	var totalAmount =0 ;
+	var flag = 0;
+	var otb = new GlideRecord('x_nios2_onetimebil_one_time_line_items');
+	otb.addQuery('u_bill_number.u_bill_number', current.u_bill_number);
+	otb.query();
+	while(otb.next()) {
+		//check empty amount if ptc exist
+		if (otb.u_amount !=''){
+		    totalAmount = totalAmount + parseFloat(otb.u_amount);
+		}
+		if (otb.u_customer_ptc =='' || otb.u_amount =='' ){
+			flag =1;
+			gs.addInfoMessage('Customer PTC and Amount cannot be empty.');
+		   current.setAbortAction(true);
+			
+			
+		}
+	}
+	
+	if (flag == 0){
+	totalAmount = totalAmount.toFixed(2);
+	billAmount = parseFloat(billAmount).toFixed(2);
+	if (totalAmount != billAmount){
+			gs.addInfoMessage('Service amount must be equal to the total of Customer amount.');
+		current.setAbortAction(true);
+	}
+	else{
+	//after validate set status to Approved
+	current.u_status = 'Approved';	
+	current.update();
+	gs.addInfoMessage('Bill has been approved.');
+		
+	action.setRedirectURL(current);	
+}}
+}
+]]></script>
+        <show_insert>false</show_insert>
+        <show_multiple_update>false</show_multiple_update>
+        <show_query>false</show_query>
+        <show_update>true</show_update>
+        <sys_class_name>sys_ui_action</sys_class_name>
+        <sys_created_by>d_jnz17</sys_created_by>
+        <sys_created_on>2018-10-26 13:53:05</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_id>88a171cfdb1d2f005eabf20e0f961941</sys_id>
+        <sys_mod_count>29</sys_mod_count>
+        <sys_name>Approve Bill</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="One Time Billing" source="x_nios2_onetimebil">3f5dbd7edbe8a30004c77d1d0f961949</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="One Time Billing">3f5dbd7edbe8a30004c77d1d0f961949</sys_scope>
+        <sys_update_name>sys_ui_action_88a171cfdb1d2f005eabf20e0f961941</sys_update_name>
+        <sys_updated_by>d_jnz17</sys_updated_by>
+        <sys_updated_on>2019-07-11 15:09:36</sys_updated_on>
+        <table>x_nios2_onetimebil_one_time_bill</table>
+        <ui11_compatible>true</ui11_compatible>
+        <ui16_compatible>false</ui16_compatible>
+    </sys_ui_action>
+</record_update>

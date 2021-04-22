@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script">
+    <sys_script action="INSERT_OR_UPDATE">
+        <abort_action>false</abort_action>
+        <access>package_private</access>
+        <action_delete>false</action_delete>
+        <action_insert>true</action_insert>
+        <action_label/>
+        <action_name/>
+        <action_query>false</action_query>
+        <action_run_at>server</action_run_at>
+        <action_update>false</action_update>
+        <active>false</active>
+        <add_message>false</add_message>
+        <advanced>true</advanced>
+        <application/>
+        <change_fields>false</change_fields>
+        <client_callable>false</client_callable>
+        <collection>x_nios2_onetimebil_upload_work_order_file</collection>
+        <condition/>
+        <description/>
+        <execute_function>false</execute_function>
+        <filter_condition/>
+        <is_rest>false</is_rest>
+        <message/>
+        <name>validateAttachment</name>
+        <onclick/>
+        <order>100</order>
+        <priority>100</priority>
+        <read_access_action>false</read_access_action>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions/>
+        <script><![CDATA[(function executeRule(current, previous /*null when async*/) {
+
+	var att = new GlideRecord("sys_attachment");
+	att.addQuery("table_name", "x_nios2_onetimebil_upload_work_order_file");
+	att.addQuery("table_sys_id", current.sys_id);
+	att.query();
+	var number = att.getRowCount();
+	if(number != 1){
+		if(number == 0){
+			gs.addErrorMessage('Please attach at least one Work Order file.');
+			current.setAbortAction(true);
+		}
+		if(number > 1){
+			gs.addErrorMessage("Please attache only one Work Order file at a time."); 
+			current.setAbortAction(true);
+		}
+	}else{
+		att.next();
+		var format = att.content_type.toString();
+		if(format != 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'){
+			gs.addErrorMessage("The upload file must be EXCEL file");
+			current.setAbortAction(true);
+		}else{			
+			var otb = new GlideRecord('x_nios2_onetimebil_one_time_bill'); //Create new One Time Billing record
+			otb.initialize();
+			otb.u_service_provided = current.service_provided;
+// 			var state_to = new GlideRecord('x_nios2_onetimebil_services_provided');
+// 			state_to.addQuery('name',current.parent.u_to_duty_state.name);
+// 			state_to.query();
+// 			if (state_to.next()) {
+// 				gr.u_from_duty_state = state_to.code;
+// 			}
+			otb.u_fy = current.fy;
+			otb.u_customer_division = current.customer_division;
+			otb.u_customer_ao = current.u_customer_ao;
+			otb.insert();
+			var otbId = otb.getUniqueValue();
+			parseFile(att.sys_id.toString(), otbId);	
+			//change current to x_nios2_onetimebil_one_time_line_items (Customer PTC)
+			//current.status = 'PROCESSED';
+			//current.setWorkflow(false);
+			//current.update();
+		}
+	}
+})(current, previous);
+
+function parseFile(attId, otbId){
+	var attachmentStream = new GlideSysAttachment().getContentStream(attId);
+	var parser = new sn_impex.GlideExcelParser();
+	//gs.addErrorMessage(id);
+	parser.parse(attachmentStream);
+	var headers = parser.getColumnHeaders();  
+	//var header1 = headers[0]; 
+	//var header2 = headers[1];
+	var header3 = headers[2]; //Associate Name
+	var header4 = headers[3]; //Fund Code
+	//var header5 = headers[4]; 
+	var header6 = headers[5]; //Reference #
+	var header7 = headers[6]; //PTC
+	var header8 = headers[7]; //Amount Paid
+	//gs.addErrorMessage(header1 + " : " + header2 + " : " + header3 + " : " + header4 + " : " + header5 + " : " + header6); 
+	while(parser.next()) { 
+		var row = parser.getRow(); 
+		if(row[header3] != null){
+			var ptc = new GlideRecord('u_project_task_code'); //Customer PTCs (Project Task Code)
+			ptc.initialize();
+			ptc.u_bill_number = otbId;
+			ptc.u_customer_ptc = row[header7];
+			ptc.req_no = row[header6];
+			ptc.u_fund_code = row[header4];
+			ptc.u_amount = row[header8];
+			ptc.u_customer = row[header3];
+			ptc.insert();
+			// 			var code = row[header1];
+			// 			if(code.length > 50){
+			// 				code = code.substring(0,50);
+			// 			}
+			// 			ptc.order_code = code;
+			// 			var equip = row[header2];
+			// 			if(equip.length > 200){
+			// 				equip = equip.substring(0,200);
+			// 			}
+			// 			orderCode.equipment = equip; //orderCode = ptc
+			// 			orderCode.price = parseFloat(row[header3]);
+			// 			orderCode.effective_date = row[header4];
+			// 			orderCode.expireation_date = row[header5];
+			// 			orderCode.service = row[header6];
+			// 			orderCode.insert();
+		}
+	}
+	parser.close();
+
+}(current, previous);]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>cnssn</sys_created_by>
+        <sys_created_on>2021-02-05 16:04:32</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_id>29a300131b86a4d0f5659605bc4bcb16</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_name>validateAttachment</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="One Time Billing" source="x_nios2_onetimebil">3f5dbd7edbe8a30004c77d1d0f961949</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="One Time Billing">3f5dbd7edbe8a30004c77d1d0f961949</sys_scope>
+        <sys_update_name>sys_script_29a300131b86a4d0f5659605bc4bcb16</sys_update_name>
+        <sys_updated_by>cnssn</sys_updated_by>
+        <sys_updated_on>2021-02-08 18:55:35</sys_updated_on>
+        <template/>
+        <when>after</when>
+    </sys_script>
+</record_update>

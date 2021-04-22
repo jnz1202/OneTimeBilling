@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role">
+    <sys_security_acl_role action="DELETE">
+        <sys_class_name>sys_security_acl_role</sys_class_name>
+        <sys_created_by>jnz1202</sys_created_by>
+        <sys_created_on>2020-09-17 10:51:05</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>d0d370bd1b5fd8107562a7dcac4bcb66</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>.admin</sys_name>
+        <sys_package display_value="One Time Billing" source="x_nios2_onetimebil">3f5dbd7edbe8a30004c77d1d0f961949</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="One Time Billing">3f5dbd7edbe8a30004c77d1d0f961949</sys_scope>
+        <sys_security_acl display_value="">b3c3b4b91b5fd8107562a7dcac4bcbfa</sys_security_acl>
+        <sys_update_name>sys_security_acl_role_d0d370bd1b5fd8107562a7dcac4bcb66</sys_update_name>
+        <sys_updated_by>jnz1202</sys_updated_by>
+        <sys_updated_on>2020-09-17 10:51:05</sys_updated_on>
+        <sys_user_role display_value="admin" name="admin">2831a114c611228501d4ea6c309d626d</sys_user_role>
+        <transaction_id/>
+    </sys_security_acl_role>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="One Time Billing">3f5dbd7edbe8a30004c77d1d0f961949</application>
+        <comments/>
+        <file_path/>
+        <instance_id>5d010e26db5384901198b16a3296195c</instance_id>
+        <instance_name>nistdev</instance_name>
+        <name>sys_security_acl_role_d0d370bd1b5fd8107562a7dcac4bcb66</name>
+        <order/>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role"><sys_security_acl_role action="INSERT_OR_UPDATE"><sys_class_name>sys_security_acl_role</sys_class_name><sys_created_by>jnz1202</sys_created_by><sys_created_on>2020-09-17 10:51:05</sys_created_on><sys_customer_update>false</sys_customer_update><sys_id>d0d370bd1b5fd8107562a7dcac4bcb66</sys_id><sys_mod_count>0</sys_mod_count><sys_name>.admin</sys_name><sys_package display_value="One Time Billing" source="x_nios2_onetimebil">3f5dbd7edbe8a30004c77d1d0f961949</sys_package><sys_policy/><sys_replace_on_upgrade>false</sys_replace_on_upgrade><sys_scope display_value="One Time Billing">3f5dbd7edbe8a30004c77d1d0f961949</sys_scope><sys_security_acl display_value="">b3c3b4b91b5fd8107562a7dcac4bcbfa</sys_security_acl><sys_update_name>sys_security_acl_role_d0d370bd1b5fd8107562a7dcac4bcb66</sys_update_name><sys_updated_by>jnz1202</sys_updated_by><sys_updated_on>2020-09-17 10:51:05</sys_updated_on><sys_user_role display_value="admin" name="admin">2831a114c611228501d4ea6c309d626d</sys_user_role><transaction_id/></sys_security_acl_role></record_update>]]></payload>
+        <payload_hash>1939546147</payload_hash>
+        <record_name>.admin</record_name>
+        <reverted_from/>
+        <source>e86130391b5fd8107562a7dcac4bcb15</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>jnz1202</sys_created_by>
+        <sys_created_on>2020-09-17 10:51:05</sys_created_on>
+        <sys_id>a43470bd1b5fd8107562a7dcac4bcb6d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1749bb06f780000001</sys_recorded_at>
+        <sys_updated_by>jnz1202</sys_updated_by>
+        <sys_updated_on>2020-09-17 10:51:05</sys_updated_on>
+        <type>Access Roles</type>
+        <update_guid>ac3470bd725fd81072ab1f752916206c</update_guid>
+        <update_guid_history>ac3470bd725fd81072ab1f752916206c:1939546147</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Record deleted 2020-09-17 07:02:27">57c6b0391bdfd8107562a7dcac4bcb4c</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>jnz1202</sys_created_by>
+        <sys_created_on>2020-09-17 11:02:27</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_db_object display_value="" name="sys_security_acl_role">sys_security_acl_role</sys_db_object>
+        <sys_id>7b13054b6dea46a0b20f0f142f3e2324</sys_id>
+        <sys_metadata>d0d370bd1b5fd8107562a7dcac4bcb66</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>.admin</sys_name>
+        <sys_package display_value="One Time Billing" source="x_nios2_onetimebil">3f5dbd7edbe8a30004c77d1d0f961949</sys_package>
+        <sys_parent display_value="x_nios2_onetimebil_provider_ptc.u_amount">b3c3b4b91b5fd8107562a7dcac4bcbfa</sys_parent>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="One Time Billing">3f5dbd7edbe8a30004c77d1d0f961949</sys_scope>
+        <sys_scope_delete display_value="">10bdecfd6df0499c9ac08ab0c5e65664</sys_scope_delete>
+        <sys_update_name>sys_security_acl_role_d0d370bd1b5fd8107562a7dcac4bcb66</sys_update_name>
+        <sys_update_version display_value="sys_security_acl_role_d0d370bd1b5fd8107562a7dcac4bcb66">a43470bd1b5fd8107562a7dcac4bcb6d</sys_update_version>
+        <sys_updated_by>jnz1202</sys_updated_by>
+        <sys_updated_on>2020-09-17 11:02:27</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_related sys_domain="global" table="x_nios2_onetimebil_one_time_bill" version="2" view="">
+        <sys_ui_related_list_entry action="INSERT_OR_UPDATE">
+            <filter/>
+            <list_id display_value="One Time bill - Default view" name="x_nios2_onetimebil_one_time_bill" related_list="NULL" sys_domain="global" view="Default view">9a8c1d27dbc1a300881ef30e0f961984</list_id>
+            <order_by/>
+            <position>0</position>
+            <related_list>x_nios2_onetimebil_provider_ptc.u_bill</related_list>
+            <sys_class_name>sys_ui_related_list_entry</sys_class_name>
+            <sys_created_by>d_jnz17</sys_created_by>
+            <sys_created_on>2018-10-15 15:21:58</sys_created_on>
+            <sys_id>5a8c1d27dbc1a300881ef30e0f961985</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>d_jnz17</sys_updated_by>
+            <sys_updated_on>2018-10-15 15:21:58</sys_updated_on>
+        </sys_ui_related_list_entry>
+        <sys_ui_related_list_entry action="INSERT_OR_UPDATE">
+            <filter/>
+            <list_id display_value="One Time bill - Default view" name="x_nios2_onetimebil_one_time_bill" related_list="NULL" sys_domain="global" view="Default view">9a8c1d27dbc1a300881ef30e0f961984</list_id>
+            <order_by/>
+            <position>1</position>
+            <related_list>x_nios2_onetimebil_one_time_line_items.u_bill_number</related_list>
+            <sys_class_name>sys_ui_related_list_entry</sys_class_name>
+            <sys_created_by>d_jnz17</sys_created_by>
+            <sys_created_on>2018-10-15 15:21:58</sys_created_on>
+            <sys_id>968c59a7dbc1a300881ef30e0f961917</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>d_jnz17</sys_updated_by>
+            <sys_updated_on>2018-10-15 15:21:58</sys_updated_on>
+        </sys_ui_related_list_entry>
+        <sys_ui_related_list action="INSERT_OR_UPDATE">
+            <calculated_name>One Time bill - Default view</calculated_name>
+            <filter/>
+            <name>x_nios2_onetimebil_one_time_bill</name>
+            <order_by/>
+            <position/>
+            <related_list/>
+            <sys_class_name>sys_ui_related_list</sys_class_name>
+            <sys_created_by>d_jnz17</sys_created_by>
+            <sys_created_on>2018-10-15 15:21:58</sys_created_on>
+            <sys_customer_update>false</sys_customer_update>
+            <sys_domain>global</sys_domain>
+            <sys_id>9a8c1d27dbc1a300881ef30e0f961984</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>One Time bill - Default view</sys_name>
+            <sys_package display_value="One Time Billing" source="x_nios2_onetimebil">3f5dbd7edbe8a30004c77d1d0f961949</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="One Time Billing">3f5dbd7edbe8a30004c77d1d0f961949</sys_scope>
+            <sys_update_name>sys_ui_related_x_nios2_onetimebil_one_time_bill_null</sys_update_name>
+            <sys_updated_by>d_jnz17</sys_updated_by>
+            <sys_updated_on>2018-10-15 15:21:58</sys_updated_on>
+            <sys_user/>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_related_list>
+    </sys_ui_related>
+</record_update>
